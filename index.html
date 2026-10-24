@@ -1,117 +1,612 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#101f38" />
-<meta name="description" content="하루에 하나씩 열리는 찬양팀의 25가지 작은 이야기. 우리들의 12월." />
-<title>우리들의 12월 · 코람데오 찬양팀</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<style>
-:root { --night:#101f38; --night2:#1a3250; --paper:#fff8e9; --paper2:#f5ead2; --ink:#302e34; --red:#a9473d; --red2:#89352d; --gold:#f2be70; --green:#416e5d; --line:#d9c7a5; --shadow:0 16px 42px rgba(7,13,24,.24); }
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#0d1a30;color:var(--ink);font-family:'Noto Sans KR',system-ui,sans-serif;-webkit-font-smoothing:antialiased} button,textarea,input{font:inherit} button{cursor:pointer} button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f9c36f;outline-offset:3px} ::selection{background:#eabf91;color:#302222}
-button[disabled]{cursor:not-allowed;opacity:.6}
-.sky{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 15% 13%,#293d5d 0,transparent 44%),radial-gradient(ellipse at 85% 74%,#213a53 0,transparent 43%),linear-gradient(180deg,#10203a,#0d172b 80%)}
-.sky:after{content:"";position:absolute;inset:0;opacity:.35;background-image:radial-gradient(circle,#ffe8ba 1px,transparent 1.5px),radial-gradient(circle,#fff4d7 1px,transparent 1.7px);background-size:107px 116px,167px 151px;background-position:0 0,51px 44px}
-.shell{max-width:1160px;margin:auto;padding:20px 22px 54px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#fdf5e4;padding:8px 0 21px}.brand{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;font-weight:800}.brand-mark{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;border:1px solid #dfb981;color:#eecf90;font-size:21px;transform:rotate(10deg)}.top-right{display:flex;align-items:center;gap:9px}.chip{border:1px solid #64748c;color:#f5e6cd;background:rgba(255,255,255,.07);padding:9px 12px;border-radius:24px;font-size:12px}.chip:hover{background:rgba(255,255,255,.15)}.preview-banner{display:none;margin-bottom:14px;color:#fff3d1;border:1px dashed #eabf91;background:#644d3a80;padding:10px 14px;border-radius:12px;font-size:12px}.preview-banner.show{display:block}
-.layout{display:grid;grid-template-columns:minmax(310px,.88fr) minmax(0,1.12fr);gap:22px;align-items:start}
-.hero{position:sticky;top:18px;background:linear-gradient(155deg,#25405d,#172d48 50%,#10233e);border:1px solid #75829a55;box-shadow:var(--shadow);border-radius:30px;min-height:750px;color:#fff8e9;overflow:hidden;isolation:isolate;padding:34px 33px 28px}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 83% 17%,#f6d99b25 0 13%,transparent 27%)}.hero .kicker{font-size:11px;letter-spacing:.33em;color:#f3dba7;font-weight:600}.hero h1{font-family:'Gaegu',cursive;font-size:clamp(55px,6vw,88px);font-weight:700;line-height:1.04;letter-spacing:-.07em;margin:17px 0 12px;text-shadow:0 4px 14px #061a2e50}.hero h1 span{color:#ffdba2;display:block;margin-top:-2px}.hero h1 .star{font-size:32px;display:inline;vertical-align:top;color:#ffd48b;letter-spacing:0}.hero-sub{font-family:'Gowun Dodum',sans-serif;font-size:16px;line-height:1.9;color:#f3eadd;max-width:295px}.hero-sub strong{color:#ffdeac}.hero-scene{width:calc(100% + 66px);height:auto;display:block;margin:10px -33px -18px;max-height:340px}.hero-note{font-family:'Gaegu',cursive;font-size:19px;color:#fff0cf;text-align:center;margin:8px 0 18px;transform:rotate(-2deg);background:rgba(13,30,49,.76);border-radius:11px;padding:6px 5px;text-shadow:0 1px 2px #0d1a28}.countdown{background:linear-gradient(140deg,#fff9e9,#f4e6c9);border-radius:20px;color:var(--ink);box-shadow:0 6px 0 #ae8c5c35;position:relative;padding:19px 20px 18px}.countdown:before{content:"✦";font-size:24px;color:#bd7d3c;position:absolute;right:17px;top:8px}.mini-label{font-size:11px;letter-spacing:.05em;font-weight:800;color:#935a47}.countdown h2{font-family:'Gaegu',cursive;font-size:31px;line-height:1.1;margin:6px 0}.countdown p{font-size:12px;line-height:1.8;color:#776554;margin:0 0 13px}.primary{border:0;border-radius:999px;color:#fff9ef;background:var(--red);padding:12px 20px;font-size:13px;font-weight:800;box-shadow:0 4px 0 var(--red2);transition:transform .15s,background .15s}.primary:hover{transform:translateY(-2px);background:#bd5547}.primary:active{transform:translateY(2px);box-shadow:none}.outlined{border:1px solid #c2a887;background:#fffaf2;color:#573d34;border-radius:999px;padding:10px 15px;font-size:13px;font-weight:700}.outlined:hover{background:#f9ead2}
-.board{background:var(--paper);border-radius:30px;padding:28px 27px 31px;box-shadow:var(--shadow);border:2px solid #f4e1bc;position:relative;overflow:hidden}.board:before{content:"";height:13px;position:absolute;top:0;left:0;right:0;background:repeating-linear-gradient(100deg,#faead0 0 15px,#fffaf0 15px 30px);opacity:.75}.board-label{font-size:11px;letter-spacing:.15em;font-weight:800;color:#926f59}.section-title{font-family:'Gaegu',cursive;font-size:39px;line-height:1.12;margin:7px 0 8px;color:#403a3a}.section-desc{font-size:12px;color:#756c60;line-height:1.8;margin:0}.board-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.dec-star{font-family:'Gaegu',cursive;font-size:42px;line-height:1;color:#d3924f;transform:rotate(12deg);padding:12px 4px}
-.progress-card{background:#eee3ca;border:1px solid #e0cfb0;border-radius:15px;padding:13px 15px;margin:20px 0 21px}.progress-head{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px;font-weight:800;color:#5c5047}.progress-head small{font-size:11px;font-weight:600;color:#88765e}.progress-bar{height:8px;overflow:hidden;border-radius:999px;background:#d4c6ab;margin-top:10px}.progress-fill{height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,#b55c4e,#dcaa6b);transition:width .5s}
-.calendar-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}.tile{border:1.5px solid #dfcdae;border-radius:15px;min-width:0;aspect-ratio: .91;padding:9px 6px 6px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;position:relative;background:#fffaf0;box-shadow:0 4px 0 #eadabc;transition:transform .18s,box-shadow .18s,border-color .18s;color:#483e36}.tile:hover:not(.locked){transform:translateY(-3px) rotate(-1deg);box-shadow:0 7px 0 #e1caa7}.tile:active:not(.locked){transform:translateY(1px)}.tile .daynum{align-self:flex-start;font-family:'Gaegu',cursive;font-size:23px;line-height:.9;font-weight:700}.tile .art{font-size:clamp(25px,3vw,39px);line-height:1.18;filter:drop-shadow(0 3px 1px #59423219);transition:transform .2s}.tile:hover:not(.locked) .art{transform:rotate(-10deg) scale(1.08)}.tile small{font-size:9px;font-weight:800;color:#79634e;white-space:nowrap}.tile.locked{background:linear-gradient(135deg,#d6d8dc,#bac4ce);color:#656e77;border-color:#aeb8c4;box-shadow:0 4px 0 #aab3bd;cursor:pointer}.tile.locked .art{filter:grayscale(1);opacity:.22}.tile.locked small{color:#596574}.tile .lock-icon{position:absolute;top:49%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:99px;background:#4a6075dc;color:#fff;padding:5px;font-size:13px}.tile.today{border:2px solid #c75e48;background:#fff0d6;box-shadow:0 0 0 4px #e5ad5b50,0 5px 0 #d7a27a}.tile.done:not(.today){border-color:#79a487;background:#eff5e8}.tile .done-marker{position:absolute;top:5px;right:6px;border-radius:50%;background:#4e8260;color:#fff;font-size:10px;height:17px;width:17px;display:grid;place-items:center}
-.legend{display:flex;flex-wrap:wrap;gap:15px;margin:17px 1px 4px;font-size:11px;color:#72675b}.legend span{display:flex;align-items:center;gap:5px}.legend i{width:10px;height:10px;display:inline-block;border-radius:4px;background:#f7eedf;border:1px solid #d8c19c}.legend .open-dot{background:#ffedd5;border:2px solid #bd6149}.legend .locked-dot{background:#bac4ce;border:1px solid #aeb8c4}.legend .done-dot{background:#dceadd;border:1px solid #73a180}
-.board-bottom{border-top:1px dashed #d0bfa4;padding-top:19px;margin-top:23px;display:flex;gap:10px;align-items:flex-start;color:#837460;font-size:11px;line-height:1.8}.board-bottom .light{font-size:21px}.decor-stamps{position:absolute;right:-28px;bottom:-37px;font-size:100px;opacity:.05;transform:rotate(20deg);pointer-events:none}
-.site-footer{padding:25px 0 5px;text-align:center;color:#acb5bd;font-size:11px;line-height:1.8}.site-footer b{color:#e8d1a7;font-weight:600}
-.dialog{border:0;border-radius:25px;box-shadow:0 25px 95px #020911ab;max-width:470px;width:calc(100% - 28px);padding:0;overflow:hidden;background:var(--paper);color:var(--ink);max-height:min(88vh,850px)}.dialog::backdrop{background:rgba(5,14,27,.82);backdrop-filter:blur(5px)}.modal-head{position:relative;background:linear-gradient(145deg,#1f3e55,#304d5b);color:#fff5df;text-align:center;padding:27px 25px 25px;overflow:hidden}.modal-head:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,#fff1c1 1px,transparent 1.7px);background-size:48px 58px;opacity:.4}.close{position:absolute;z-index:2;right:12px;top:12px;border:1px solid #ffffff44;color:#fff;background:#ffffff22;border-radius:99px;width:34px;height:34px;font-size:24px;line-height:1}.modal-day{position:relative;font-size:11px;font-weight:800;letter-spacing:.15em;color:#f2ca9b}.modal-emoji{position:relative;font-size:76px;line-height:1.1;filter:drop-shadow(0 7px 6px #0a21365c);margin:8px auto}.modal-title{position:relative;font-family:'Gaegu',cursive;font-size:38px;font-weight:700;line-height:1.07;margin:4px 0 8px}.modal-tagline{position:relative;font-size:12px;line-height:1.6;color:#efdbc1;margin:0}.modal-body{padding:24px 24px 27px;max-height:52vh;overflow:auto}.modal-body .prompt{font-size:15px;font-weight:800;line-height:1.7;white-space:pre-line;margin:0 0 16px}.modal-body textarea{width:100%;padding:14px;border-radius:14px;border:1px solid #cbbca4;resize:vertical;min-height:135px;background:#fffdf7;color:#433c38;font-size:13px;line-height:1.8}.hint{font-size:11px;line-height:1.75;color:#867464}.form-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:15px}.choices{display:grid;gap:9px}.choice{display:flex;align-items:center;gap:10px;border:1px solid #ddcdb6;border-radius:13px;padding:12px;text-align:left;background:#fffdf8;color:#44382f;font-size:13px}.choice:hover{border-color:#ba765e;background:#fcf0e3}.choice.selected{border:2px solid #ad5749;background:#fff0e1;padding:11px}.choice .circle{height:19px;width:19px;flex:0 0 19px;border-radius:50%;border:1px solid #b9a78d;display:grid;place-items:center;font-size:11px;color:#fff}.choice.selected .circle{background:#a9473d;border-color:#a9473d}.feedback{padding:13px 14px;background:#eaf2e5;color:#3e6847;border-radius:12px;line-height:1.75;font-size:12px;margin-top:14px}.feedback.wrong{background:#fbecd7;color:#825332}.feedback.neutral{background:#efe5d7;color:#705e4c}.activity-options{display:grid;gap:8px}.check-row{border:1px solid #dfceb4;border-radius:12px;display:flex;align-items:center;gap:11px;padding:11px;background:#fffcf6;font-size:12px;line-height:1.5}.check-row input{accent-color:#8b5546;width:17px;height:17px}.result-pill{display:inline-flex;gap:6px;align-items:center;border-radius:99px;padding:7px 10px;background:#e6eee6;color:#386344;font-size:11px;font-weight:700;margin-bottom:14px}.story-section{margin-bottom:11px;border-bottom:1px dashed #cfc0aa;padding:0 0 12px}.story-section strong{font-size:12px}.story-section p{margin:6px 0 0;color:#695c4f;font-size:12px;white-space:pre-wrap;line-height:1.7}.empty-state{color:#736554;font-size:13px;line-height:1.8;border-radius:14px;background:#f2e6d3;padding:18px}.fade-in{animation:up .3s ease both}@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:980px){.shell{max-width:760px}.layout{grid-template-columns:1fr}.hero{position:relative;top:auto;min-height:0;padding:25px 25px 23px}.hero h1{font-size:71px}.hero-scene{max-height:300px;width:calc(100% + 50px);margin:0 -25px -24px}.hero-note{margin:0 0 14px}.countdown{max-width:100%}.board{padding:28px 24px}.tile .art{font-size:37px}}
-@media(max-width:520px){.shell{padding:11px 12px 35px}.topbar{padding:6px 4px 13px}.brand{font-size:9px;letter-spacing:.11em}.brand-mark{width:30px;height:30px;font-size:17px}.chip{font-size:11px;padding:8px 10px}.layout{gap:13px}.hero{border-radius:22px;padding:24px 21px 20px}.hero h1{font-size:65px;line-height:.95;margin:15px 0 10px}.hero .kicker{font-size:10px}.hero-sub{font-size:14px}.hero-scene{width:calc(100% + 42px);margin:1px -21px -22px;max-height:none}.hero-note{margin:2px 0 14px}.countdown{padding:17px 18px;border-radius:16px}.countdown h2{font-size:28px}.board{border-radius:22px;padding:25px 14px 23px}.section-title{font-size:34px}.board-label{font-size:10px}.section-desc{font-size:11px}.progress-card{margin:17px 0 18px}.calendar-grid{gap:7px}.tile{border-radius:10px;padding:7px 3px 5px;box-shadow:0 3px 0 #eadabc}.tile .daynum{font-size:19px}.tile .art{font-size:clamp(22px,7vw,30px)}.tile small{font-size:8px}.tile .lock-icon{font-size:11px;padding:3px}.tile .done-marker{font-size:8px;width:14px;height:14px;right:3px;top:3px}.legend{gap:10px;font-size:10px}.board-bottom{margin-top:17px;padding-top:13px}.dialog{width:calc(100% - 18px);border-radius:20px}.modal-body{padding:18px 17px 24px}.modal-head{padding:24px 16px 21px}.modal-title{font-size:34px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f2e9">
+  <meta name="description" content="코람데오 우체통 — 한 사람에게 한 통의 따뜻한 편지를">
+  <title>코람데오 우체통 | CORAM DEO POST OFFICE</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap');
+    :root { --bg:#f7f2e9; --paper:#fffefa; --ink:#4e392c; --muted:#927c6c; --burgundy:#7c4240; --gold:#b39562; --line:#e9ded0; --shadow:0 20px 60px rgba(79,57,40,.10); }
+    * { box-sizing:border-box; }
+    html { min-height:100%; }
+    body { margin:0; min-height:100vh; background:var(--bg); color:var(--ink); font-family:'Gowun Dodum','Apple SD Gothic Neo','Malgun Gothic',sans-serif; line-height:1.7; }
+    body::before { content:""; position:fixed; inset:0; background-image:radial-gradient(#c6b79e25 .6px,transparent .6px); background-size:8px 8px; pointer-events:none; z-index:-1; }
+    a { color:var(--burgundy); }
+    button,input,textarea { font:inherit; }
+    button { cursor:pointer; }
+    button:focus-visible,input:focus-visible,textarea:focus-visible { outline:3px solid #c5a06e; outline-offset:3px; }
+    .page { width:min(1080px,calc(100% - 36px)); margin:0 auto; padding:38px 0 70px; }
+    .topline { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:11px; letter-spacing:.22em; color:#9a8473; font-weight:bold; }
+    .topline .mini { display:flex; align-items:center; gap:8px; letter-spacing:.12em; }
+    .mark { width:10px; height:10px; border:1px solid var(--burgundy); transform:rotate(45deg); display:inline-block; }
+    .hero { text-align:center; padding:44px 10px 29px; }
+    .hero .eyebrow { color:var(--burgundy); font-size:12px; letter-spacing:.28em; font-weight:700; }
+    h1 { font-family:'Gowun Batang',Georgia,serif; font-size:clamp(37px,6vw,61px); font-weight:700; letter-spacing:-.065em; line-height:1.3; margin:12px 0; }
+    .hero .desc { color:var(--muted); font-size:14px; margin:12px 0 0; }
+    .flourish { display:flex; align-items:center; justify-content:center; gap:16px; margin:24px auto 8px; color:var(--gold); }
+    .flourish::before,.flourish::after { content:""; width:70px; height:1px; background:#d8c5a8; }
+    .hero-symbol { width:23px;height:23px; fill:none; stroke:var(--gold); stroke-width:1.6; }
+    .surface { background:var(--paper); border:1px solid #ede2d6; border-radius:18px; box-shadow:var(--shadow); }
+    .card { padding:29px; }
+    .two-col { display:grid; grid-template-columns:1fr .86fr; gap:20px; }
+    .section-label { font-size:11px; letter-spacing:.20em; font-weight:700; color:var(--burgundy); margin-bottom:9px; }
+    .section-title { font:700 24px/1.5 'Gowun Batang',serif; letter-spacing:-.06em; margin:0 0 8px; }
+    .help { color:var(--muted); font-size:13px; margin:0 0 20px; }
+    .field-label { display:block; font-size:13px; font-weight:700; margin:0 0 8px; }
+    .input,.textarea { display:block; width:100%; padding:13px 15px; border:1px solid #dfd0c0; border-radius:10px; color:var(--ink); background:#fffdfa; outline:none; }
+    .input:focus,.textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px #b3956220; }
+    .textarea { min-height:220px; resize:vertical; line-height:1.85; }
+    .input::placeholder,.textarea::placeholder { color:#b7a797; }
+    .smalltext { font-size:12px; color:var(--muted); margin:8px 0 0; }
+    .field { margin:16px 0; }
+    .btn { appearance:none; background:var(--burgundy); border:1px solid var(--burgundy); color:white; border-radius:10px; min-height:47px; padding:11px 18px; font-size:14px; font-weight:700; transition:.15s transform,.15s background,.15s border; }
+    .btn:hover { background:#6b3432; transform:translateY(-1px); }
+    .btn:active { transform:translateY(1px); }
+    .btn:disabled { opacity:.46; cursor:not-allowed; transform:none; }
+    .btn.secondary { background:white; color:var(--burgundy); border:1px solid #cfbcb0; }
+    .btn.secondary:hover { background:#fbf5ee; }
+    .btn.tertiary { background:transparent; color:#837063; border:1px solid #ddcec2; font-weight:400; }
+    .btn.wide { display:block; width:100%; }
+    .btn.ghost { border:0; color:var(--burgundy); background:transparent; padding:5px 0; min-height:0; font-size:12px; text-decoration:underline; text-underline-offset:3px; }
+    .btn.ghost:hover { background:transparent; }
+    .btns { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+    .note { border:1px solid #e7ddcd; background:#faf6ef; color:#6d594c; padding:14px 17px; border-radius:12px; font-size:12px; }
+    .note strong { color:var(--ink); }
+    .rules { margin:0; padding:0; list-style:none; display:grid; gap:12px; }
+    .rules li { display:flex; gap:11px; font-size:13px; color:#6c584a; }
+    .check { display:inline-flex; align-items:center; justify-content:center; flex:0 0 22px; height:22px; border-radius:50%; background:#f0e7d9; color:#87654b; font-weight:bold; font-size:13px; }
+    .stepper { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:4px 0 24px; }
+    .stepper span { font-size:11px; border:1px solid #e1d3c3; border-radius:30px; color:#927d6c; padding:5px 10px; background:#fffcf5; }
+    .stepper span.active { background:#7c4240; border-color:#7c4240; color:#fff; }
+    .statusbar { display:flex; align-items:center; gap:11px; background:#f2e7da; border-radius:10px; padding:12px 14px; font-size:13px; color:#715544; margin:13px 0 20px; }
+    .statusdot { background:#839a7b; width:8px; height:8px; border-radius:50%; flex:none; }
+    .grid-stats { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 20px; }
+    .stat { background:#fbf7f0; padding:16px; border:1px solid #ebdfd2; border-radius:11px; }
+    .stat .big { font:700 29px 'Gowun Batang',serif; }
+    .stat .txt { font-size:11px; color:var(--muted); }
+    .table-wrap { max-height:310px; overflow:auto; border:1px solid #eadfce; border-radius:10px; margin:14px 0; }
+    table { width:100%; border-collapse:collapse; font-size:12px; }
+    th { background:#f8f0e6; color:#776253; font-weight:700; text-align:left; position:sticky;top:0; }
+    th,td { padding:10px 11px; border-bottom:1px solid #f0e8dc; white-space:nowrap; }
+    .code { font-family:Consolas,monospace; letter-spacing:.08em; color:#5e4439; font-weight:bold; }
+    details summary { cursor:pointer; color:var(--burgundy); font-size:13px; }
+    .inline-action { padding:4px 8px; border-radius:6px; background:#fbf4ea; border:1px solid #e5d7c7; color:#755849; font-size:11px; }
+    .error { color:#a33e36; font-size:13px; margin:10px 0; }
+    .success { color:#4b7959; font-size:13px; margin:10px 0; }
+    .hide { display:none!important; }
+    .footer { text-align:center; padding:25px 0 0; color:#a18b78; font-size:11px; letter-spacing:.04em; }
+    .cardline { height:1px; background:var(--line); margin:20px 0; }
 
-/* 데이터베이스 연결과 공동 참여 */
-.connection-state{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:9px 12px;background:#e7eee7;border:1px solid #bfd3c2;color:#356448;font-size:11px;font-weight:700;margin-top:15px}
-.connection-state:before{content:"";width:7px;height:7px;background:#45865c;border-radius:50%}
-.connection-state[data-status="demo"]{background:#f2e5ce;border-color:#e1cba4;color:#755533}.connection-state[data-status="demo"]:before{background:#c78d40}
-.connection-state[data-status="loading"]{background:#e6edf2;border-color:#c4d6e2;color:#41637a}.connection-state[data-status="loading"]:before{background:#719bb5}
-.connection-state[data-status="error"]{background:#ffe5da;border-color:#e9b1a8;color:#963e38}.connection-state[data-status="error"]:before{background:#c44b41}
-.share-config{display:grid;gap:8px;margin:14px 0;padding:13px;border-radius:13px;background:#f5ead7;border:1px solid #e3d1b4}
-.share-config label{font-size:12px;font-weight:700}.share-config input[type="text"]{width:100%;border:1px solid #cbbba1;padding:10px;border-radius:9px;background:#fffdf8;font-size:12px}
-.share-choice{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.6}.share-choice input{accent-color:#a9473d;margin-top:3px}.share-caption{font-size:11px;color:#7e6c56;line-height:1.7}
-.community{margin-top:18px;padding-top:17px;border-top:2px dashed #d9c8aa}.community h3{font-family:'Gaegu',cursive;font-size:25px;margin:0 0 7px}.community-desc{color:#826e5c;font-size:11px;line-height:1.6;margin:0 0 10px}.story-note{padding:12px 13px;margin:8px 0;background:#fffdf6;border:1px solid #e4d5ba;border-radius:13px;box-shadow:0 2px 0 #eee0c8}
-.story-note .note-author{font-size:11px;font-weight:800;color:#985648}.story-note p{font-size:12px;line-height:1.85;white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0 0}.story-note time{font-size:10px;font-weight:500;color:#9a8978;margin-left:7px}
-.poll-total{font-size:12px;color:#6d614f;margin-bottom:13px}.poll-stat{margin-bottom:12px}.poll-stat-top{display:flex;gap:7px;justify-content:space-between;font-size:12px;line-height:1.6}.poll-stat-top strong{font-size:12px;color:#9e4438;white-space:nowrap}.poll-track{height:10px;background:#e4d8c4;border-radius:99px;margin-top:5px;overflow:hidden}.poll-fill{height:100%;background:linear-gradient(90deg,#ba7865,#d7a568);border-radius:99px;transition:width .4s ease}.poll-stat.mine .poll-fill{background:linear-gradient(90deg,#5e876c,#82aa85)}
-.form-error{color:#ad3a35;font-size:12px;font-weight:700;margin-top:9px;line-height:1.7}.small-action{border:1px solid #dfccb4;border-radius:8px;background:#fffaf1;padding:8px 11px;font-size:11px;color:#624b3a;cursor:pointer}
-.utility-row{display:flex;align-items:center;justify-content:space-between;gap:7px;margin:8px 0}.utility-row small{font-size:10px;color:#9a8570}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:999;background:#182d39;color:#fff9e9;padding:11px 16px;border-radius:12px;font-size:12px;line-height:1.5;box-shadow:0 8px 30px #0006;max-width:calc(100vw - 30px);width:max-content;pointer-events:none}
-.toast[hidden]{display:none}.modal-body .share-choice input{width:auto}
-
-
-/* Member identity & secure administration — illustration style preserved. */
-.identity-panel{margin:0 0 18px;padding:14px 18px;background:#fff7e7;border:1px solid #d7be90;border-left:5px solid #ac6653;border-radius:14px;color:#3e3340;font-size:13px;line-height:1.85;box-shadow:0 6px 20px #050d2040}
-.identity-panel strong{color:#8c332b}.top-right{flex-wrap:wrap;justify-content:flex-end}.chip.admin-action{background:#ffe6bb;color:#433022;border-color:#c89865;font-weight:750}.member-name{font-size:12px;color:#f4e4c8}
-.profile-label{display:block;margin:14px 0 7px;font-weight:700}.profile-input{width:100%;background:#fffef7;color:#342b32;border:1px solid #cebba3;border-radius:12px;padding:13px}.identity-email{font-size:12px;color:#685a55;overflow-wrap:anywhere}.profile-consent{display:flex;align-items:flex-start;gap:12px;margin:18px 0;padding:12px;background:#f5ebdc;border-radius:12px;font-size:12px;line-height:1.75}.profile-consent input{margin-top:5px;transform:scale(1.2)}
-.admin-dialog{max-width:1060px;width:min(1060px,calc(100% - 18px));max-height:94vh}.admin-inner{background:#fff9ed;padding:22px;border-radius:19px}.admin-header{display:flex;align-items:center;justify-content:space-between;gap:10px}.admin-header h2{font-family:'Gaegu',cursive;font-size:37px;margin:0;color:#633e37}.admin-header button{background:transparent;border:0;font-size:28px}.admin-desc{font-size:12px;color:#755f57;line-height:1.65}.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:15px 0}.admin-stats>div{background:#f4ead5;border-radius:12px;text-align:center;padding:14px 6px}.admin-stats strong{display:block;font-size:22px;color:#ad4d3e}.admin-stats span{font-size:11px;color:#665a51}.admin-controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.admin-controls input,.admin-controls select{min-width:0;flex:1 1 130px;border:1px solid #cfbda7;background:#fffdf6;border-radius:10px;padding:9px;font-size:12px}.admin-controls button{border:1px solid #c1a888;color:#48382f;background:#f4e5cd;padding:9px 12px;border-radius:10px;font-size:12px}.admin-table-wrap{overflow:auto;max-height:56vh;border:1px solid #dfd2b7;border-radius:12px}.admin-table{width:100%;border-collapse:collapse;min-width:630px;font-size:12px}.admin-table th{background:#f0dfc2;position:sticky;top:0;text-align:left;color:#4a4039}.admin-table th,.admin-table td{padding:11px 9px;border-bottom:1px solid #e5d9c5;vertical-align:top}.admin-table small{font-size:10px;color:#847468}.record-answer{white-space:pre-wrap;overflow-wrap:anywhere;display:inline-block;max-width:300px;margin-top:4px}.record-kind{font-weight:750;color:#9c473d}.empty-admin{text-align:center;padding:30px!important}.admin-status{font-size:12px;color:#7d634f}
-@media(max-width:520px){.identity-panel{font-size:11px;padding:11px}.member-name{font-size:10px}.admin-inner{padding:13px}.admin-header h2{font-size:29px}.admin-stats strong{font-size:17px}.admin-dialog{max-height:96vh}}
-</style>
+    /* Special recipient: five thoughtfully shuffled reflection prompts and one Bible meditation. */
+    .reflection-section { background:#fcf8f2; border:1px solid #e9ddce; border-radius:14px; padding:20px 18px; text-align:left; margin:22px auto 0; max-width:440px; }
+    .reflection-eyebrow { color:#a17e63; font-size:10px; font-weight:700; letter-spacing:.14em; margin:0 0 5px; }
+    .reflection-heading { font:700 19px/1.5 'Gowun Batang',serif; color:#654735; margin:0 0 6px; }
+    .reflection-help { font-size:12px; color:#9a8370; margin:0 0 13px; }
+    .reflection-list { list-style:none; padding:0; margin:0; display:grid; gap:9px; }
+    .reflection-list li { display:flex; align-items:flex-start; gap:10px; border:1px solid #eadfd1; background:#fffefa; border-radius:9px; padding:11px 12px; color:#695143; font-size:13px; line-height:1.65; }
+    .reflection-list .prompt-num { display:inline-flex; width:21px; height:21px; flex:0 0 21px; align-items:center; justify-content:center; border-radius:100%; background:#f3e9dc; color:#97735b; font:700 11px Georgia,serif; margin-top:1px; }
+    .scripture-section { border:1px solid #e8d9c8; background:#fbf6ef; border-radius:14px; padding:25px 20px 22px; max-width:440px; margin:26px auto 0; text-align:center; }
+    .scripture-ornament { color:#b59674; font-size:22px; line-height:1; margin-bottom:10px; }
+    .scripture-heading { font:700 20px/1.5 'Gowun Batang',serif; margin:4px 0 10px; color:#684739; }
+    .scripture-message { font:400 15px/1.9 'Gowun Batang',serif; color:#665043; margin:10px auto 8px; word-break:keep-all; }
+    .scripture-ref { font-size:12px; color:#927357; font-weight:700; margin:4px 0 6px; }
+    .scripture-notice { color:#aa9887; font-size:11px; margin:9px 0 0; }
+    /* recipient page */
+    .public-wrap { max-width:560px; margin:0 auto; }
+    .postcard { position:relative; padding:34px 32px 38px; text-align:center; min-height:390px; overflow:hidden; }
+    .postcard::before { content:""; position:absolute; inset:10px; border:1px solid #efe2d2; border-radius:12px; pointer-events:none; }
+    .postcard::after { content:"✧"; position:absolute; top:23px; right:28px; color:#c6af8b; font-size:23px; }
+    .postmark { display:inline-flex; align-items:center; justify-content:center; width:66px; height:66px; border:1px dashed #b89770; border-radius:50%; color:#a9835f; font:700 11px/1.25 Georgia,serif; letter-spacing:.06em; transform:rotate(-10deg); margin:0 auto 24px; }
+    .post-eyebrow { color:#aa8669; font-size:11px; letter-spacing:.23em; font-weight:bold; margin:12px 0; }
+    .intro-head { font:700 clamp(22px,5.5vw,28px)/1.55 'Gowun Batang',serif; letter-spacing:-.04em; margin:14px auto 14px; }
+    .intro-desc { font-size:14px; line-height:1.95; color:#806b5b; margin:0 auto 25px; max-width:390px; }
+    .field.public-field { max-width:325px; text-align:left; margin:16px auto; }
+    .address { padding:22px 0 18px; margin:12px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .address small { color:#ad9175; letter-spacing:.2em; display:block; font:700 11px Georgia,serif; margin-bottom:12px; }
+    .address-name { font:700 clamp(36px,7vw,55px)/1.3 'Gowun Batang',serif; color:var(--burgundy); letter-spacing:-.05em; word-break:keep-all; }
+    .message { font-size:14px; line-height:2.05; color:#6f5849; white-space:pre-line; word-break:keep-all; margin:18px auto; }
+    .recipient-box { animation:letterIn .7s both ease-out; }
+    .envelope { position:relative; width:185px; height:130px; margin:18px auto 28px; filter:drop-shadow(0 14px 17px #a68c7340); }
+    .envelope .rect { position:absolute; inset:0; border-radius:5px; background:#e6c9a5; }
+    .envelope .back { position:absolute; width:100%; height:70%; left:0; top:0; background:#d2ab84; clip-path:polygon(0 0,100% 0,50% 85%); }
+    .envelope .front { position:absolute; inset:0; background:#e9d0b1; clip-path:polygon(0 0,50% 60%,100% 0,100% 100%,0 100%); border-radius:5px; }
+    .envelope .flap { position:absolute; width:100%; height:67%; top:0; left:0; background:#c89c79; clip-path:polygon(0 0,100% 0,50% 92%); transform-origin:top; transition:transform 0.8s ease; z-index:2; }
+    .envelope.open .flap { transform:rotateX(180deg); }
+    .envelope .seal { position:absolute; left:calc(50% - 19px); top:calc(50% - 5px); width:38px; height:38px; background:#8b4945; border:3px double #d6aaa1; border-radius:50%; color:#f6e6d5; display:flex; align-items:center; justify-content:center; font:700 18px Georgia,serif; z-index:3; transition:opacity .3s; }
+    .envelope.open .seal { opacity:0; }
+    .space { height:12px; }
+    @keyframes letterIn { 0% { opacity:0; transform:translateY(14px) scale(.985) } 100% { opacity:1;transform:translateY(0) scale(1) } }
+    .stamp { display:inline-block; border:1px dashed #b59a79; transform:rotate(-3deg); color:#987a62; padding:7px 11px; font-size:10px; letter-spacing:.16em; margin-top:8px; }
+    .step-number { display:inline-flex; align-items:center; justify-content:center; border-radius:50%;background:#eee2d2; font-weight:700; color:#8d6a53; width:24px;height:24px; margin-right:10px; }
+    .instruction { font-size:13px; color:#7a6554; text-align:left; margin:10px auto 0; max-width:410px; }
+    .instruction p { margin:9px 0; }
+    .bottom-note { text-align:center; color:#927e6d; font-size:12px; margin:20px 0 4px; }
+    .absent-option { text-align:left; border:1px solid #e6d9c9; background:#fcf7f0; border-radius:14px; margin:25px auto 0; padding:20px; max-width:440px; }
+    .absent-option .alternate-title { font:700 19px/1.5 'Gowun Batang',serif; margin:0 0 5px; color:var(--ink); }
+    .absent-option .alternate-description { color:#856e5b; font-size:13px; margin:0 0 12px; }
+    .mobile-letter-panel { margin-top:17px; border-top:1px dashed #d9c8b3; padding-top:17px; }
+    .letter-sheet { background:#fffefa; border:1px solid #e7d8c7; box-shadow:0 8px 26px #7458410c; border-radius:9px; padding:17px; }
+    .letter-heading { font:700 20px 'Gowun Batang',serif; color:var(--burgundy); margin:0 0 12px; }
+    .letter-sheet .textarea { min-height:195px; background:#fffefa; }
+    .letter-from { text-align:right; color:#7d6252; font-size:13px; margin:14px 0 0; }
+    .letter-count { text-align:right; font-size:11px; color:#9a8875; margin-top:5px; }
+    .delivery-status { margin:12px 0 0; color:#6b7056; font-size:12px; min-height:1.4em; }
+    .public-footer { display:flex; align-items:center; justify-content:center; gap:12px; margin:25px auto 0; font:700 11px Georgia,serif;letter-spacing:.20em;color:#b29a80; }
+    .public-footer::before,.public-footer::after { content:"";display:block;width:36px;height:1px;background:#d8c7ad; }
+    @media(max-width:720px) { .two-col { grid-template-columns:1fr; } .page { width:min(100% - 24px,560px); padding:23px 0 45px; } .hero { padding:32px 4px 20px; } .card { padding:22px 19px; } .postcard { padding:30px 20px; } .topline { font-size:9px; letter-spacing:.13em; } .topline .mini { letter-spacing:.02em; } .btns .btn { flex:1 1 auto; } .stepper span { font-size:10px; padding:5px 7px; } }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after {animation:none!important; transition:none!important;} }
+    @media print { body { background:white; } .no-print { display:none!important; } .page { margin:0 auto; } .surface { box-shadow:none; } }
+  </style>
 </head>
 <body>
-<div class="sky" aria-hidden="true"></div>
-<div class="shell">
-  <header class="topbar">
-    <div class="brand"><span class="brand-mark" aria-hidden="true">✶</span> CORAM DEO <span style="color:#bea57e">/</span> CHRISTMAS 2026</div>
-    <div class="top-right"><span class="member-name" id="memberName" hidden></span><button class="chip admin-action" id="adminBtn" hidden>관리자 📋</button><button class="chip" id="accountBtn">Google 로그인</button><button class="chip" id="howBtn">이용 방법 <span aria-hidden="true">↗</span></button></div>
-  </header>
-  <div class="preview-banner" id="previewBanner">✦ 미리보기 모드 — 모든 날짜를 열어볼 수 있습니다. 실제 공유할 때는 주소의 <b>?preview=1</b>을 제거하세요.</div>
-  <div id="identityPanel" class="identity-panel" role="note">참여자의 모든 제출 내용과 작성자는 관리자에게 공개됩니다.</div>
-  <main class="layout">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="kicker">✦ &nbsp;A LITTLE GIFT EVERY DAY&nbsp; ✦</div>
-      <h1 id="hero-title">우리들의 <span>12월<span class="star"> ✶</span></span></h1>
-      <p class="hero-sub">매일 하나씩 열리는 작은 선물.<br/>우리의 <strong>웃음과 감사</strong>를 모아<br/>올해의 마지막 페이지를 완성해요.</p>
-      <svg class="hero-scene" viewBox="0 0 560 330" role="img" aria-label="눈 내리는 겨울 마을의 교회와 함께 찬양하는 사람들 일러스트">
-        <defs><linearGradient id="snow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff6df"/><stop offset="1" stop-color="#bdd4da"/></linearGradient><linearGradient id="chapel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbdfac"/><stop offset="1" stop-color="#e9b878"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="6"/></filter></defs>
-        <g fill="#f9e4b2" opacity=".9"><circle cx="46" cy="34" r="2"/><circle cx="137" cy="48" r="3"/><circle cx="221" cy="16" r="1.8"/><circle cx="315" cy="48" r="2.5"/><circle cx="421" cy="28" r="2"/><circle cx="506" cy="70" r="2"/><circle cx="79" cy="114" r="1.5"/><circle cx="246" cy="80" r="2"/></g>
-        <path d="M450 37v29M435 51h30" stroke="#ffd58b" stroke-width="3" stroke-linecap="round"/><circle cx="450" cy="51" r="18" fill="#ffd58b" opacity=".2" filter="url(#glow)"/>
-        <path d="M0 214 Q90 162 187 208 T390 200 T560 216V330H0Z" fill="#365970"/><path d="M0 252 Q94 220 169 252 T365 250 T560 244V330H0Z" fill="#4e7180"/>
-        <g fill="#1b4054"><path d="M25 268 56 157 86 268Z"/><path d="M7 268 56 187 106 268Z"/><path d="M104 267 127 182 158 267Z"/><path d="M87 267 127 207 170 267Z"/><path d="M468 268 502 157 536 268Z"/><path d="M450 268 502 186 552 268Z"/></g>
-        <g stroke="#9fc3b9" stroke-width="5" stroke-linecap="round"><path d="M16 233q27-15 54 0"/><path d="M480 227q22-12 45 0"/></g>
-        <path d="M349 159 434 99 512 161V279H349Z" fill="url(#chapel)" stroke="#6f5a4f" stroke-width="5" stroke-linejoin="round"/>
-        <path d="M340 163 434 94 521 163" fill="none" stroke="#fff4de" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><path d="M383 125V85h40v15" fill="#d6a66d"/><path d="M380 82 403 60 427 82Z" fill="#f2e6d3" stroke="#d1b690" stroke-width="4"/><path d="M402 51v29M389 62h26" stroke="#dcb56c" stroke-width="4" stroke-linecap="round"/>
-        <path d="M414 279v-62q20-29 40 0v62" fill="#815e51"/><circle cx="447" cy="247" r="3" fill="#f2ca87"/>
-        <rect x="373" y="178" width="26" height="38" rx="12" fill="#9e6249"/><rect x="377" y="183" width="18" height="29" rx="9" fill="#ffda84"/><rect x="477" y="178" width="22" height="38" rx="11" fill="#a45f45"/><rect x="480" y="182" width="16" height="31" rx="8" fill="#ffda84"/>
-        <circle cx="434" cy="171" r="12" fill="none" stroke="#44735d" stroke-width="7"/><path d="M425 163q9-7 18 0" fill="none" stroke="#c65c48" stroke-width="4"/>
-        <path d="M0 279Q100 259 191 278T375 275T560 274V330H0Z" fill="url(#snow)"/><path d="M0 305q110-20 228-2t332 0v27H0Z" fill="#f8ead2" opacity=".85"/>
-        <g transform="translate(97 194)"><ellipse cx="22" cy="77" rx="44" ry="8" fill="#95aeb2" opacity=".5"/><circle cx="25" cy="6" r="17" fill="#e5ad7b"/><path d="M9 3q12-25 33 0" fill="#523c40"/><path d="M9 25q23-10 38 5l14 50H-2Z" fill="#c2674c"/><path d="M11 35 34 47" stroke="#efc18f" stroke-width="9" stroke-linecap="round"/><path d="M29 53 62 32" stroke="#f3c598" stroke-width="8" stroke-linecap="round"/><ellipse cx="65" cy="30" rx="25" ry="16" transform="rotate(-22 65 30)" fill="#d9a365" stroke="#835b45" stroke-width="3"/><path d="M46 35 10 57" stroke="#8c593c" stroke-width="8" stroke-linecap="round"/><path d="M62 17v27M52 30h26" stroke="#986c4f" stroke-width="2"/></g>
-        <g transform="translate(224 197)"><circle cx="22" cy="5" r="17" fill="#edb98d"/><path d="M5 3q9-28 32-8l3 16-17-6" fill="#473941"/><path d="M4 23q16-9 36 0l15 59H-14Z" fill="#5e8b75"/><path d="M36 34 55 14" stroke="#f1bf9a" stroke-width="8" stroke-linecap="round"/><path d="M55 14 68 1" stroke="#f1bf9a" stroke-width="6" stroke-linecap="round"/><path d="M70 2V80" stroke="#b4bbc0" stroke-width="3"/><circle cx="70" cy="-1" r="6" fill="#cfb79d"/></g>
-        <g transform="translate(304 226)"><circle cx="6" cy="1" r="13" fill="#edb888"/><path d="M-8 15q17-10 31 2l11 48H-16Z" fill="#b88b62"/><path d="M-2 23q20 17 45 1" fill="none" stroke="#edb888" stroke-width="7" stroke-linecap="round"/><path d="M-30 52h77" stroke="#ede4d7" stroke-width="8"/><path d="M-23 52v19M39 52v19" stroke="#d4c8b5" stroke-width="4"/></g>
-        <g fill="#fff9e5" opacity=".9"><circle cx="23" cy="220" r="3"/><circle cx="171" cy="178" r="3"/><circle cx="212" cy="114" r="2"/><circle cx="330" cy="74" r="2"/><circle cx="492" cy="115" r="3"/><circle cx="529" cy="178" r="3"/><circle cx="57" cy="88" r="2"/><circle cx="273" cy="163" r="2"/></g>
-      </svg>
-      <div class="hero-note">✧ 함께한 찬양이 우리의 선물이었어 ✧</div>
-      <div class="countdown" id="todayBox" aria-live="polite"></div>
+  <main class="page">
+    <div class="topline"><div class="mini"><span class="mark"></span> CORAM DEO</div><span>POST OFFICE · 2026</span></div>
+    <header class="hero">
+      <div class="eyebrow">A LETTER OF GRATITUDE</div>
+      <h1>코람데오 우체통</h1>
+      <p class="desc">평소 전하지 못했던 마음을, 한 통의 편지에 담아.</p>
+      <div class="flourish"><svg class="hero-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v12H3zM3 8l9 7 9-7M8 3l4 3 4-3"></path></svg></div>
+    </header>
+
+    <section id="builder" class="hide" aria-label="행사 주최자 설정">
+      <nav class="stepper" aria-label="준비 단계"><span class="active">01 · 팀원 입력</span><span>02 · 1:1 랜덤 배정</span><span>03 · 페이지 배포</span></nav>
+      <div id="builder-input" class="two-col">
+        <section class="surface card">
+          <div class="section-label">STEP 01 — ORGANIZER SETUP</div>
+          <h2 class="section-title">팀원 명단을 입력해 주세요.</h2>
+          <p class="help">한 줄에 한 명씩, 편지 이벤트에 참여할 팀원 전원의 이름을 입력해 주세요. <strong>현장 참석이 어려워 모바일 편지를 보낼 팀원도 포함</strong>해 주세요. 배정은 이 명단으로 한 번만 확정됩니다.</p>
+          <label class="field-label" for="roster">찬양팀 전체 명단 <span id="roster-count" style="font-weight:400;color:#9a8570">(0명)</span></label>
+          <textarea id="roster" class="textarea" spellcheck="false" placeholder="예시)
+서진
+민서
+지훈
+예은
+도윤" aria-describedby="roster-info"></textarea>
+          <p id="roster-info" class="smalltext">최소 2명 이상 · 동명이인은 구분되는 이름으로 입력해 주세요 (예: 김서진, 이서진).</p>
+          <p id="roster-error" class="error hide" role="alert"></p>
+          <div class="btns" style="margin-top:18px"><button id="create-draw" class="btn wide" type="button">💌 특별 수신인 랜덤 배정 확정하기</button></div>
+        </section>
+        <aside class="surface card">
+          <div class="section-label">OUR PROMISE</div>
+          <h2 class="section-title">이 네 가지는 꼭 지킬게요.</h2>
+          <p class="help">단순 무작위 추첨과 달리, 모든 사람이 감사편지 한 통의 주인공이 되도록 설계했어요.</p>
+          <ul class="rules">
+            <li><span class="check">✓</span><span>모든 팀원에게 <strong>수신인 1명씩</strong> 배정돼요.</span></li>
+            <li><span class="check">✓</span><span>모든 팀원이 <strong>정확히 한 번</strong> 수신인이 돼요.</span></li>
+            <li><span class="check">✓</span><span><strong>자기 자신</strong>은 절대로 배정되지 않아요.</span></li>
+            <li><span class="check">✓</span><span>같은 개인 코드로 접속하면 <strong>항상 같은 수신인</strong>이 보여요.</span></li>
+          </ul>
+          <div class="cardline"></div>
+          <div class="note"><strong>운영 방법</strong><br>주최자가 명단을 넣고 추첨을 한 번 확정한 다음, 완성된 참가자용 HTML을 배포해요. 팀원들은 각자의 개인 코드를 입력해 봉투를 열어요. 현장 참석자는 손편지를 우체통에 넣고, <strong>불참자는 모바일에서 편지를 작성해 휴대폰 공유 기능으로 수신인 또는 운영진에게 전달</strong>할 수 있어요.</div>
+        </aside>
+      </div>
+
+      <div id="builder-result" class="hide">
+        <div class="statusbar"><span class="statusdot"></span><span id="final-status">수신인 배정이 확정되었습니다.</span></div>
+        <div class="two-col">
+          <section class="surface card">
+            <div class="section-label">STEP 02 — DRAW COMPLETE</div>
+            <h2 class="section-title">편지의 목적지가 정해졌어요.</h2>
+            <p class="help">이제 배정 결과가 고정됐습니다. 같은 HTML과 같은 개인 코드를 사용하면 결과가 바뀌지 않아요.</p>
+            <div class="grid-stats"><div class="stat"><div class="big" id="stat-people">0</div><div class="txt">참여 팀원</div></div><div class="stat"><div class="big">0</div><div class="txt">중복 · 자기 자신 배정</div></div></div>
+            <div class="btns"><button id="download-public" class="btn" type="button">⬇ 참가자용 웹페이지 다운로드</button><button id="download-csv" class="btn secondary" type="button">⬇ 관리자용 코드 목록 CSV</button></div>
+            <div class="field"><label class="field-label" for="public-url">배포할 웹페이지 주소 <span style="font-weight:400;color:#9a8570">(선택)</span></label><input id="public-url" class="input" placeholder="https://예시-사이트.netlify.app/" type="url" inputmode="url"><p class="smalltext">다운로드한 파일(index.html)을 웹에 업로드한 뒤 그 주소를 넣으면 개인별 링크도 만들 수 있어요. 주소가 없어도 개인 코드는 사용할 수 있어요.</p><p id="url-error" class="error hide"></p></div>
+            <div class="btns"><button id="copy-shares" class="btn secondary" type="button">개인별 배포 목록 복사</button><button id="open-preview" class="btn secondary" type="button">참가자 화면 미리보기</button></div>
+            <p id="action-status" class="smalltext" aria-live="polite"></p>
+          </section>
+          <section class="surface card">
+            <div class="section-label">STEP 03 — SHARE WITH THE TEAM</div>
+            <h2 class="section-title">코드를 한 명씩 보내 주세요.</h2>
+            <p class="help">모든 팀원은 자신의 개인 코드 또는 개인 전용 링크를 받습니다. 코드는 추첨 결과를 다시 찾는 열쇠예요.</p>
+            <div class="note"><strong>추천 배포 순서</strong><br>① 참가자용 HTML을 웹에 올리기 → ② QR코드로 페이지 공유하기 → ③ 개인 코드를 각 팀원에게 개별 전달하기 → ④ 휴대폰에서 특별 수신인 확인하기 → ⑤ 현장 참석자는 손편지 투함, 불참자는 모바일 편지를 직접 공유하여 전달하기.</div>
+            <details style="margin-top:20px" open=""><summary>팀원별 개인 코드 · 배정 결과 확인</summary><div class="table-wrap"><table><thead><tr><th>팀원</th><th>개인 코드</th><th>수신인</th><th>복사</th></tr></thead><tbody id="draw-table"></tbody></table></div><p class="smalltext">이 목록은 관리자용입니다. 전체 목록을 참가자에게 공유하지 마세요.</p></details>
+            <div class="cardline"></div>
+            <p class="smalltext">⚠️ 행사 중 다시 추첨하면 이미 나눠 준 코드·링크가 무효가 될 수 있어요. 전체 초기화는 행사 시작 전 명단을 바꿔야 할 때만 진행하세요.</p>
+            <button id="reset-builder" class="btn ghost" type="button">명단·배정 전체 초기화</button>
+          </section>
+        </div>
+      </div>
     </section>
-    <section class="board" id="calendar" aria-labelledby="calendar-title">
-      <div class="board-top"><div><div class="board-label">DECEMBER ADVENT CALENDAR</div><h2 class="section-title" id="calendar-title">25개의 작은 선물 ✨</h2><p class="section-desc">12월 1일부터 25일까지 · 매일 <strong>오전 8시(KST)</strong> 공개<br/>날짜를 누르면 오늘의 이야기가 펼쳐져요.</p></div><div class="dec-star" aria-hidden="true">✳</div></div>
-      <div class="progress-card"><div class="progress-head"><span id="progressTitle">우리의 이야기, 이제 시작이에요</span><small id="progressCount">0 / 25 OPEN</small></div><div class="progress-bar" role="progressbar" aria-label="공개된 날짜 진행률" aria-valuemin="0" aria-valuemax="25" aria-valuenow="0"><div id="progressFill" class="progress-fill"></div></div></div>
-      <div class="connection-state" data-status="loading" id="connectionState" role="status">Firebase 연결을 확인하는 중...</div>
-      <div id="calendarGrid" class="calendar-grid" aria-label="12월 1일부터 25일까지의 선물 캘린더"></div>
-      <div class="legend"><span><i class="open-dot"></i>오늘 열린 선물</span><span><i class="done-dot"></i>내가 참여한 날</span><span><i class="locked-dot"></i>아직 잠긴 선물</span></div>
-      <div class="board-bottom"><span class="light" aria-hidden="true">🕯️</span><div>지난 날짜의 선물도 다시 열 수 있어요. Firebase를 연결하면 <b>선택한 감사 글은 함께 읽고</b>, <b>투표에 참여한 뒤 전체 결과</b>를 확인할 수 있어요. 개인 기도문과 비공개 답변은 일반 팀원에게 보이지 않지만 <b>관리자는 작성자와 모든 기록을 확인할 수 있어요.</b></div></div>
-      <div class="decor-stamps" aria-hidden="true">❄</div>
+
+    <section id="public-view" class="public-wrap hide" aria-label="나의 특별한 수신인 확인">
+      <div class="surface postcard">
+        <div class="postmark">CORAM<br>DEO<br>POST</div>
+        <div id="public-login" class="hide">
+          <div class="post-eyebrow">A LETTER AWAITS</div>
+          <h2 class="intro-head">오늘 당신에게<br>특별한 수신인이 기다리고 있습니다.</h2>
+          <p class="intro-desc">당신에게만 주어진 개인 코드를 입력하고<br>마음을 전할 사람을 만나 보세요.</p>
+          <form id="login-form" novalidate="">
+            <div class="field public-field"><label for="personal-code" class="field-label">나의 개인 코드</label><input id="personal-code" class="input" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="24" placeholder="예: K7M2W9PQ" aria-describedby="code-tip"><p id="code-tip" class="smalltext">운영진에게 받은 코드를 입력해 주세요.</p></div>
+            <p id="login-error" class="error hide" role="alert"></p>
+            <button type="submit" class="btn" style="width:min(100%,325px)">나의 우편함 열기 →</button>
+          </form>
+        </div>
+        <div id="public-ready" class="hide">
+          <div class="post-eyebrow">A SPECIAL DELIVERY FOR YOU</div>
+          <h2 class="intro-head"><span id="visitor-name"></span>님,<br>오늘 마음을 전할 사람이 있어요.</h2>
+          <div class="envelope" aria-hidden="true"><div class="rect"></div><div class="back"></div><div class="front"></div><div class="flap"></div><div class="seal">C</div></div>
+          <p class="intro-desc">봉투를 열면 당신의 특별한 수신인이 나타납니다.<br>이 배정은 한 번만 확정되며 변경되지 않아요.</p>
+          <button id="reveal-btn" class="btn" style="width:min(100%,325px)">💌 특별한 수신인 확인하기</button>
+        </div>
+        <div id="public-revealed" class="recipient-box hide" aria-live="polite">
+          <div class="post-eyebrow">TODAY'S SPECIAL RECIPIENT</div>
+          <h2 class="intro-head"><span id="writer-name"></span>님에게<br>특별한 수신인이 배정되었습니다.</h2>
+          <div class="address"><small>TO.</small><div id="recipient-name" class="address-name"></div></div>
+          <p class="message">이 사람의 좋은 점과 함께하면서<br>감사했던 순간을 떠올려 보세요.<br><br>짧은 한마디라도 좋습니다.<br>당신의 진심을 편지에 담아 전달해 주세요.</p>
+
+          <section class="reflection-section" aria-labelledby="reflection-title">
+            <div class="reflection-eyebrow">FIVE LITTLE QUESTIONS</div>
+            <h3 class="reflection-heading" id="reflection-title">💌 마음을 전하는 작은 질문들</h3>
+            <p class="reflection-help">100개의 질문 중 당신을 위해 뽑힌 다섯 가지예요. 모두 답하지 않아도 괜찮아요.</p>
+            <ol id="reflection-questions" class="reflection-list"></ol>
+          </section>
+          <div class="stamp">WITH LOVE, CORAM DEO</div>
+          <div class="cardline"></div>
+          <p class="instruction"><span class="step-number">1</span>이 사람에게 전할 감사의 마음을 떠올려 주세요.</p>
+          <p class="instruction"><span class="step-number">2</span>준비된 편지지에 직접 손편지를 써 주세요.</p>
+          <p class="instruction"><span class="step-number">3</span>편지를 봉투에 넣고 코람데오 우체통에 넣어 주세요.</p>
+          <div class="note" style="margin-top:23px;text-align:center">추가로 마음을 전하고 싶은 사람에게는<br>얼마든지 자유롭게 편지를 보내도 좋습니다.</div>
+          <section class="absent-option" aria-labelledby="absent-heading">
+            <h3 id="absent-heading" class="alternate-title">💌 모임에 참석하지 못하나요?</h3>
+            <p class="alternate-description">괜찮아요. 이곳에서 편지를 써서 마음을 전할 수 있어요. 현장에 참석한다면 위 안내대로 손편지를 써 주세요.</p>
+            <button id="open-mobile-letter" type="button" class="btn secondary wide" aria-expanded="false" aria-controls="mobile-letter-panel">✍ 모바일로 편지 작성하기</button>
+            <div id="mobile-letter-panel" class="mobile-letter-panel hide">
+              <div class="letter-sheet">
+                <p class="letter-heading">TO. <span id="mobile-recipient-name"></span></p>
+                <label for="mobile-letter-text" class="field-label">따뜻한 마음을 편지로 남겨 주세요.</label>
+                <textarea id="mobile-letter-text" class="textarea" maxlength="3000" placeholder="함께했던 순간 중 고마웠던 일을 떠올려 보세요.
+짧은 한마디도 충분히 따뜻한 편지가 될 수 있어요."></textarea>
+                <div id="letter-count" class="letter-count" aria-live="off">0 / 3000자</div>
+                <p class="letter-from">FROM. <strong id="mobile-writer-name"></strong></p>
+              </div>
+              <div class="btns" style="margin-top:13px">
+                <button id="share-mobile-letter" type="button" class="btn" style="flex:1 1 170px">✉ 편지 공유해서 전달하기</button>
+                <button id="copy-mobile-letter" type="button" class="btn secondary" style="flex:1 1 120px">내용 복사하기</button>
+              </div>
+              <p id="mobile-letter-status" class="delivery-status" role="status" aria-live="polite"></p>
+              <div class="note" style="margin-top:10px"><strong>전달 방법</strong><br>‘편지 공유’ 버튼으로 카카오톡·문자 등 원하는 앱을 선택한 뒤 <strong>특별 수신인에게 직접</strong> 보내거나, <strong>운영진에게 전달</strong>해 달라고 부탁해 주세요. 공유 후 상대방을 선택해야 하며, 이 웹페이지에서 편지가 자동 발송되지는 않아요.<br><br>작성 내용은 <strong>현재 기기에만 임시 저장</strong>돼요. 다른 기기로 옮기거나 페이지를 바꿀 예정이라면 꼭 공유하거나 복사해 두세요.</div>
+            </div>
+          </section>
+
+          <section class="scripture-section" aria-labelledby="scripture-title">
+            <div class="scripture-ornament" aria-hidden="true">✧</div>
+            <div class="reflection-eyebrow">A WORD FOR TODAY</div>
+            <h3 id="scripture-title" class="scripture-heading">오늘의 말씀</h3>
+            <p id="scripture-meditation" class="scripture-message"></p>
+            <p id="scripture-reference" class="scripture-ref"></p>
+            <p class="scripture-notice">성경 본문을 그대로 인용하지 않은 묵상 문장입니다.</p>
+          </section>
+          <p class="bottom-note">다음에 다시 접속해도 이 수신인과 질문, 말씀은 바뀌지 않아요.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin:18px auto 0"><button id="switch-code" class="btn ghost hide" type="button">다른 개인 코드로 확인하기</button></div>
+      <div class="public-footer">A LETTER OF GRATITUDE</div>
     </section>
+
+    <footer class="footer">2026 · CORAM DEO POST OFFICE<br>당신의 섬김은 결코 작지 않았습니다.</footer>
   </main>
-  <footer class="site-footer">Made with gratitude & tiny sparks of joy <span aria-hidden="true">✦</span><br/><b>CORAM DEO · 2026</b> · 우리의 하루가 누군가에게 선물이 되기를</footer>
-</div>
-<div class="toast" id="toast" hidden role="status"></div>
-<dialog id="giftDialog" class="dialog" aria-labelledby="modalTitle"><div id="modalContent"></div></dialog>
-<dialog id="adminDialog" class="dialog admin-dialog" aria-labelledby="adminTitle"><div class="admin-inner">
- <header class="admin-header"><h2 id="adminTitle">📋 우리들의 12월 · 관리자</h2><button id="adminClose" aria-label="관리자 창 닫기">×</button></header>
- <p class="admin-desc">관리자 승인된 Google 계정만 조회할 수 있습니다. 퀴즈, 투표, 글, 기도문, 체크, 미션 모두 포함되며 본인 계정의 기록만 수정할 수 있습니다. 이름은 직접 입력한 값이고 Google 이메일은 로그인 계정에 연결된 값입니다.</p>
- <p id="adminStatus" class="admin-status">기록을 불러오는 중…</p>
- <div id="adminStats" class="admin-stats"><div><strong>—</strong><span>조회 기록</span></div><div><strong>—</strong><span>참여 계정</span></div><div><strong>—</strong><span>퀴즈 정답</span></div></div>
- <div class="admin-controls"><input id="adminSearch" placeholder="이름 · 이메일 · 답변 검색" aria-label="기록 검색"><select id="adminDay" aria-label="날짜 선택"><option value="">전체 날짜</option><option value="1">12월 1일</option><option value="2">12월 2일</option><option value="3">12월 3일</option><option value="4">12월 4일</option><option value="5">12월 5일</option><option value="6">12월 6일</option><option value="7">12월 7일</option><option value="8">12월 8일</option><option value="9">12월 9일</option><option value="10">12월 10일</option><option value="11">12월 11일</option><option value="12">12월 12일</option><option value="13">12월 13일</option><option value="14">12월 14일</option><option value="15">12월 15일</option><option value="16">12월 16일</option><option value="17">12월 17일</option><option value="18">12월 18일</option><option value="19">12월 19일</option><option value="20">12월 20일</option><option value="21">12월 21일</option><option value="22">12월 22일</option><option value="23">12월 23일</option><option value="24">12월 24일</option></select><select id="adminKind" aria-label="유형 선택"><option value="">전체 유형</option><option value="quiz">퀴즈</option><option value="write">글 · 기도</option><option value="poll">투표</option><option value="check">체크</option><option value="mission">미션</option></select><button id="adminRefresh">새로고침</button><button id="adminExport">CSV 다운로드 ↓</button></div>
- <p class="admin-status" id="adminCount"></p><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>날짜</th><th>작성자</th><th>유형 · 답변 · 결과</th><th>제출 시각</th></tr></thead><tbody id="adminTableBody"></tbody></table></div>
- </div></dialog>
-<script src="firebase-config.js"></script>
-<script type="module" src="app.js"></script>
-</body>
-</html>
+  <script>
+    'use strict';
+    // 주최자 버전에서는 null이며, '참가자용 웹페이지 다운로드'를 누르면 고정된 배정 결과로 대체됩니다.
+    const BUNDLED_EVENT = /*CONFIG_SLOT_BEGIN*/{"version":2,"id":"TSGWLWFSNT-mvmahj8o","date":"2026-10-24T11:02:12.648Z","members":[{"name":"양동은","code":"3X5VMSX8UL","recipient":"이예린"},{"name":"박희진","code":"WD9P7H76RK","recipient":"이상엽"},{"name":"김지원","code":"D4YXYCFEGS","recipient":"윤예진"},{"name":"김진형","code":"XWRJ4L36B6","recipient":"강시원"},{"name":"오지현","code":"9AR9VG9CZ3","recipient":"박하민"},{"name":"윤예진","code":"V6HKJSV2NF","recipient":"김현민"},{"name":"임효정","code":"PAPJXJ765Z","recipient":"이소연"},{"name":"이상엽","code":"8ELW8VPN7F","recipient":"이자영"},{"name":"김시온","code":"FXTPKUEP6A","recipient":"임효정"},{"name":"박하민","code":"78EY7BTLBB","recipient":"김시온"},{"name":"이예린","code":"JPGU75GURW","recipient":"김혜지"},{"name":"유한나","code":"8ZKY7SYXG4","recipient":"박하은"},{"name":"박하은","code":"HFB7ZFX5CM","recipient":"김진형"},{"name":"이세빈","code":"CU7RDS3XF8","recipient":"박희진"},{"name":"이자영","code":"X3JCCPMEQT","recipient":"오지현"},{"name":"오이슬","code":"QNLVYHR74R","recipient":"박지형"},{"name":"서선율","code":"ZPZR9NFEHQ","recipient":"김지원"},{"name":"김혜지","code":"KLB44J99YK","recipient":"서선율"},{"name":"이소연","code":"QJV99V4QZH","recipient":"양동은"},{"name":"강시원","code":"LNH3V3FTH8","recipient":"이세빈"},{"name":"김현민","code":"XA2ZX9T3UG","recipient":"오이슬"},{"name":"박지형","code":"D37BMZKQYU","recipient":"유한나"}]}/*CONFIG_SLOT_END*/;
+    const RAW_TEMPLATE = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    const STORE_ADMIN = 'coramdeo-post-admin-v2';
+    const STORE_ROSTER = 'coramdeo-post-roster-v2';
+    const STORE_URL = 'coramdeo-post-url-v2';
+    const ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    const $ = id => document.getElementById(id);
+    const show = (id,on=true) => $(id).classList.toggle('hide', !on);
+    const safeGet = key => { try {return localStorage.getItem(key);}catch(e){return null;} };
+    const safeSet = (key,value) => { try {localStorage.setItem(key,value);}catch(e){} };
+    const safeRemove = key => {try {localStorage.removeItem(key);}catch(e){} };
+    function randomIndex(max) {
+      if (!Number.isSafeInteger(max) || max < 1 || max > 4294967295) throw new Error('잘못된 범위');
+      // 거부 표집으로 나머지 편향 제거.
+      const maxAccept = Math.floor(4294967296 / max) * max;
+      let n;
+      do { const a = new Uint32Array(1); crypto.getRandomValues(a); n = a[0]; } while(n >= maxAccept);
+      return n % max;
+    }
+    function makeCode(used) {
+      let code;
+      do {code = Array.from({length:10},()=>ALPHABET[randomIndex(ALPHABET.length)]).join('');}while(used.has(code));
+      used.add(code);return code;
+    }
+    function shuffle(items) {
+      const a = items.slice();
+      for(let i=a.length-1;i>0;i--) {const j=randomIndex(i+1);[a[i],a[j]]=[a[j],a[i]];}
+      return a;
+    }
+    function generateEvent(names) {
+      if (names.length < 2) throw new Error('최소 2명이 필요합니다.');
+      if (typeof crypto === 'undefined' || !crypto.getRandomValues) throw new Error('이 브라우저에서 안전한 랜덤 추첨을 지원하지 않습니다.');
+      let assigned, trials=0;
+      // 무작위 순열 중 자기 자신이 없는 순열(완전 불일치 순열)을 채택.
+      do {
+        assigned = shuffle(names);
+        trials++;
+      } while (assigned.some((target,i)=>target===names[i]) && trials<200);
+      if(assigned.some((target,i)=>target===names[i])) {
+        // 거부 표집 한계 도달 시 반드시 자기 자신이 없도록 단일 순환으로 폴백.
+        const indices = shuffle(names.map((_,i)=>i));
+        assigned = Array(names.length);
+        for(let i=0;i<indices.length;i++) assigned[indices[i]] = names[indices[(i+1)%indices.length]];
+      }
+      const used = new Set();
+      const members = names.map((name,i)=>({name,code:makeCode(used),recipient:assigned[i]}));
+      const evt={version:2,id:makeCode(new Set())+'-'+Date.now().toString(36),date:new Date().toISOString(),members};
+      if(!validateEvent(evt)) throw new Error('추첨 결과 확인에 실패했습니다.');
+      return evt;
+    }
+    function validateEvent(evt) {
+      if(!evt || evt.version!==2 || !Array.isArray(evt.members) || evt.members.length<2) return false;
+      const m=evt.members;
+      const names=m.map(v=>v.name), codes=m.map(v=>v.code), targets=m.map(v=>v.recipient);
+      return m.every(v=>typeof v.name==='string' && typeof v.code==='string' && typeof v.recipient==='string' && v.name!==v.recipient) && new Set(names).size===m.length && new Set(codes).size===m.length && new Set(targets).size===m.length && targets.every(x=>names.includes(x));
+    }
+    function normalizedNames(raw) {
+      return raw.split(/\r?\n/).map(x=>x.trim().replace(/\s+/g,' ')).filter(Boolean);
+    }
+    function parseNames(raw) {
+      const names=normalizedNames(raw);
+      if(names.length<2) throw new Error('팀원을 최소 2명 입력해 주세요.');
+      if(names.length>200) throw new Error('최대 200명까지 입력할 수 있어요.');
+      if(names.some(n=>n.length>32)) throw new Error('이름은 32자 이내로 입력해 주세요.');
+      const dup=names.find((n,i)=>names.indexOf(n)!==i);
+      if(dup) throw new Error('중복된 이름이 있어요: '+dup+' · 동명이인은 성이나 별칭으로 구분해 주세요.');
+      return names;
+    }
+    function escapeCsv(v) {return '"'+String(v??'').replace(/"/g,'""')+'"';}
+    function download(filename,content,type='text/plain;charset=utf-8') {
+      const blob = new Blob([content],{type});
+      const url = URL.createObjectURL(blob);
+      const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),1800);
+    }
+    function getBaseUrl() {
+      const raw=$('public-url').value.trim();
+      if(!raw) return null;
+      try {const u=new URL(raw);if(!['https:','http:'].includes(u.protocol))return null;u.hash='';return u.href;} catch {return null;}
+    }
+    function linkFor(code) {const base=getBaseUrl();return base ? base+'#code='+encodeURIComponent(code) : '' ;}
+    function shareText(m) {
+      const link=linkFor(m.code);
+      return '[코람데오 우체통]\n'+m.name+'님, 따뜻한 편지를 배달할 준비가 되셨나요?\n개인 코드: '+m.code+(link?'\n나의 수신인 확인: '+link:'')+'\n(개인 코드는 다른 사람에게 공유하지 말아 주세요.)';
+    }
+    async function copyText(s) {
+      if(navigator.clipboard && navigator.clipboard.writeText) {
+        try {await navigator.clipboard.writeText(s);return true;}catch(e){}
+      }
+      const textarea=document.createElement('textarea');textarea.value=s;textarea.style.cssText='position:fixed;left:-9999px;';document.body.appendChild(textarea);textarea.select();
+      let okay=false;try{okay=document.execCommand('copy');}catch(e){}textarea.remove();return okay;
+    }
+    function status(message,error=false) {const el=$('action-status');el.textContent=message;el.style.color=error?'#a33e36':'#4d7753';}
+    let adminEvent=null;
+    function renderAdminResult() {
+      show('builder-input',false);show('builder-result',true);
+      document.querySelectorAll('.stepper span').forEach((e,i)=>e.classList.toggle('active',i>0));
+      $('stat-people').textContent=adminEvent.members.length+'명';
+      $('final-status').textContent=adminEvent.members.length+'명 전원, 겹치지 않는 특별 수신인 배정 완료';
+      renderTable();
+    }
+    function renderTable() {
+      const tbody=$('draw-table');tbody.replaceChildren();
+      adminEvent.members.forEach(m=>{
+        const tr=document.createElement('tr');
+        const name=document.createElement('td');name.textContent=m.name;
+        const code=document.createElement('td');code.className='code';code.textContent=m.code;
+        const rec=document.createElement('td');rec.textContent=m.recipient;
+        const action=document.createElement('td');const btn=document.createElement('button');btn.className='inline-action';btn.type='button';btn.textContent='안내 복사';
+        btn.onclick=async()=>{const ok=await copyText(shareText(m));status(ok?m.name+'님에게 보낼 안내문을 복사했어요.':'복사할 수 없습니다. 코드를 직접 선택해 주세요.',!ok);};
+        action.appendChild(btn);tr.append(name,code,rec,action);tbody.appendChild(tr);
+      });
+    }
+    function adminInit(){
+      show('builder');
+      let saved=null;try{saved=JSON.parse(safeGet(STORE_ADMIN)||'null');}catch(e){}
+      if(validateEvent(saved)){adminEvent=saved;renderAdminResult();}else{ $('roster').value=safeGet(STORE_ROSTER)||'';updateCount(); }
+      $('public-url').value=safeGet(STORE_URL)||'';
+      $('roster').addEventListener('input',()=>{safeSet(STORE_ROSTER,$('roster').value);updateCount();show('roster-error',false);});
+      $('public-url').addEventListener('input',()=>{safeSet(STORE_URL,$('public-url').value);const txt=$('public-url').value.trim();show('url-error',!!txt&&!getBaseUrl());$('url-error').textContent='http:// 또는 https://로 시작하는 올바른 웹 주소를 넣어 주세요.';});
+      $('create-draw').addEventListener('click',()=>{
+        try{
+          const names=parseNames($('roster').value);
+          if(!confirm(names.length+'명의 팀원에게 수신인을 한 번씩 배정할까요?\n\n확정 후에는 다시 추첨하지 않고, 같은 코드를 계속 사용하는 것을 권장해요.'))return;
+          adminEvent=generateEvent(names);safeSet(STORE_ADMIN,JSON.stringify(adminEvent));renderAdminResult();window.scrollTo({top:0,behavior:'smooth'});
+        }catch(err){$('roster-error').textContent=err.message;show('roster-error');}
+      });
+      $('download-public').addEventListener('click',()=>{
+        if(!validateEvent(adminEvent)){status('잘못된 배정 결과입니다.',true);return;}
+        // HTML 자체에 한 번 확정된 1:1 매칭을 안전하게 포함해 모든 참가자가 동일한 결과를 조회함.
+        const payload=JSON.stringify(adminEvent).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
+        const slot='/*CONFIG_SLOT_BEGIN*/null/*CONFIG_SLOT_END*/';
+        if(!RAW_TEMPLATE.includes(slot)){status('배포 파일을 만들지 못했습니다.',true);return;}
+        const result=RAW_TEMPLATE.replace(slot,'/*CONFIG_SLOT_BEGIN*/'+payload+'/*CONFIG_SLOT_END*/');
+        download('index.html',result,'text/html;charset=utf-8');
+        status('참가자용 index.html을 다운로드했어요. 이 파일을 웹에 게시한 뒤 주소를 공유하세요.');
+      });
+      $('download-csv').addEventListener('click',()=>{
+        const headings=['보내는 사람','개인 코드','특별 수신인','개인 링크'];
+        const rows=adminEvent.members.map(m=>[m.name,m.code,m.recipient,linkFor(m.code)]);
+        download('코람데오_우체통_관리자코드.csv','\ufeff'+[headings,...rows].map(row=>row.map(escapeCsv).join(',')).join('\r\n'),'text/csv;charset=utf-8');
+        status('관리자용 CSV를 다운로드했어요. 팀원들에게 전체 목록을 공개하지 마세요.');
+      });
+      $('copy-shares').addEventListener('click',async()=>{
+        const content=adminEvent.members.map(m=>shareText(m)).join('\n\n────────────────────\n\n');
+        const ok=await copyText(content);status(ok?'팀원별 안내 문구를 복사했어요. 한 사람씩 따로 전달하세요.':'복사하지 못했습니다. CSV 파일을 내려받아 사용해 주세요.',!ok);
+      });
+      $('open-preview').addEventListener('click',()=>{
+        // 미리보기는 주최자 브라우저에서만 나타나고 배정 정보는 수정되지 않음.
+        show('builder',false);show('public-view',true);renderParticipant(adminEvent,adminEvent.members[0].code,true);
+        window.scrollTo({top:0,behavior:'smooth'});
+      });
+      $('reset-builder').addEventListener('click',()=>{
+        if(!confirm('정말 전체 초기화할까요?\n기존 배포용 파일이나 개인 코드는 더 이상 새 추첨과 일치하지 않습니다.\n\n이미 행사에 배포했다면 취소해 주세요.'))return;
+        if(!confirm('마지막 확인: 기존 배정 내용을 폐기하고 새로운 명단으로 다시 시작할까요?'))return;
+        safeRemove(STORE_ADMIN);adminEvent=null;show('builder-input',true);show('builder-result',false);$('roster').value=safeGet(STORE_ROSTER)||'';updateCount();document.querySelectorAll('.stepper span').forEach((e,i)=>e.classList.toggle('active',i===0));
+      });
+    }
+    function updateCount() {$('roster-count').textContent='('+normalizedNames($('roster').value).length+'명)';}
+    function storePublic(evt,code,revealed) {safeSet('coramdeo-post-user-'+evt.id,JSON.stringify({code,revealed}));}
+    function readPublic(evt) {try{return JSON.parse(safeGet('coramdeo-post-user-'+evt.id)||'null');}catch(e){return null;}}
+
+    // 100 personal reflection prompts, grouped into five themes (20 each).
+    const REFLECTION_QUESTIONS = ["이 사람에게 올해 가장 고마웠던 순간은 언제였나요?","함께 예배를 준비하면서 기억에 남는 배려가 있었나요?","이 사람 덕분에 마음이 놓였던 적이 있나요?","사소하지만 오래 기억하고 싶은 친절이 있나요?","이 사람에게 아직 전하지 못한 '고마워'가 있나요?","이 사람과 함께해서 유난히 든든했던 순간은 언제인가요?","예배 준비 중 이 사람의 도움이 빛났던 순간은 무엇인가요?","이 사람이 해 준 말 중 마음에 남아 있는 말은 무엇인가요?","어려운 날 이 사람에게 받은 작은 위로가 있었나요?","이번 한 해 이 사람과 함께해서 감사한 이유는 무엇인가요?","이 사람의 행동 중 내 마음을 따뜻하게 한 것은 무엇인가요?","이 사람이 먼저 챙겨 주었던 순간이 기억나나요?","고맙다고 말할 타이밍을 놓친 일이 있었나요?","이 사람에게 받은 도움 하나를 떠올린다면 무엇인가요?","작지만 당연하게 여기고 싶지 않은 배려가 있나요?","함께했던 시간 중 특히 감사했던 하루가 있었나요?","이 사람의 존재만으로 힘이 된 순간이 있었나요?","이 사람에게 받은 친절을 한 장면으로 표현한다면요?","올해 이 사람에게 꼭 감사하다고 말하고 싶은 이유는 무엇인가요?","이 사람과 나눈 대화 중 다시 떠올리면 웃음 나는 순간은 언제인가요?","이 사람이 예배를 위해 조용히 해 온 수고는 무엇인가요?","아무도 보지 않을 때 이 사람이 해 왔을 법한 섬김은 무엇인가요?","연습이나 예배 준비 중 이 사람의 성실함을 느꼈던 순간은요?","이 사람의 작은 책임감이 팀에 어떤 도움이 되었나요?","함께 섬길 때 이 사람에게서 배운 태도는 무엇인가요?","이 사람이 맡은 자리에서 보여 준 꾸준함은 어떤 모습인가요?","이 사람의 섬김 중 더 많은 사람이 알아주면 좋겠는 것은요?","예배가 끝난 뒤에도 기억나는 이 사람의 수고는 무엇인가요?","이 사람이 해 준 준비 덕분에 편안했던 순간이 있었나요?","이 사람의 보이지 않는 노력을 한마디로 칭찬한다면요?","이 사람이 자신의 역할을 소중히 여긴다고 느낀 순간은요?","어려운 상황에서도 자리를 지킨 모습이 기억나나요?","이 사람이 팀을 위해 양보하거나 배려한 일이 있었나요?","작은 일에도 최선을 다한 모습을 본 적이 있나요?","이 사람의 섬김이 어떤 의미에서 특별하다고 느끼나요?","이 사람이 함께 준비할 때 만들어 주는 안정감은 무엇인가요?","예배 현장에서 고마웠던 구체적인 행동 하나는 무엇인가요?","이 사람의 책임 있는 모습이 나에게 준 배움은 무엇인가요?","이 사람이 보여 준 진심 어린 섬김을 어떻게 표현하고 싶나요?","올해 이 사람의 수고에 어떤 응원의 말을 전하고 싶나요?","이 사람의 가장 따뜻한 장점은 무엇이라고 생각하나요?","이 사람이 가진 좋은 습관 중 닮고 싶은 것은 무엇인가요?","이 사람을 떠올리면 먼저 생각나는 긍정적인 모습은요?","이 사람의 말투나 태도에서 느껴지는 장점은 무엇인가요?","이 사람의 웃음이나 밝은 에너지가 도움이 된 순간은요?","다른 사람이 잘 모를 수도 있는 이 사람의 멋진 점은요?","이 사람의 어떤 배려가 공동체를 더 편안하게 하나요?","이 사람이 가진 믿음직한 면모는 무엇인가요?","이 사람의 강점을 한 단어로 표현한다면 무엇인가요?","이 사람이 자연스럽게 잘하는 일은 무엇이라고 생각하나요?","이 사람에게 배우고 싶은 태도 하나는 무엇인가요?","이 사람이 주변에 전하는 좋은 영향은 무엇인가요?","이 사람의 긍정적인 변화를 본 적이 있나요?","이 사람에게 꼭 알려 주고 싶은 장점 한 가지는 무엇인가요?","이 사람의 진지함이 멋지게 느껴졌던 순간은요?","이 사람이 다른 사람을 존중하는 모습이 기억나나요?","이 사람을 칭찬한다면 가장 먼저 어떤 말을 하고 싶나요?","이 사람과 일할 때 믿음이 가는 이유는 무엇인가요?","이 사람의 세심함이 드러나는 순간은 언제인가요?","이 사람이 스스로도 알아주었으면 하는 장점은 무엇인가요?","이 사람이 코람데오에 더해 준 특별한 가치는 무엇인가요?","이 사람 덕분에 우리 팀의 분위기가 좋아졌던 순간은요?","이 사람이 함께할 때 예배 준비가 어떻게 달라지나요?","코람데오에서 이 사람과 함께한 가장 소중한 기억은요?","이 사람과 한 팀이어서 특별히 좋았던 점은 무엇인가요?","이 사람이 공동체를 하나로 모으는 모습이 있었나요?","함께 연습하면서 이 사람 덕분에 웃었던 기억이 있나요?","이 사람이 팀원들을 챙기는 방식 중 기억에 남는 것은요?","코람데오 안에서 이 사람에게 어떤 별명을 붙여 주고 싶나요?","이 사람과 처음 만났을 때와 지금의 인상은 어떻게 다른가요?","이 사람과 앞으로 함께하고 싶은 좋은 순간은 무엇인가요?","이 사람이 다른 파트를 배려한 순간을 본 적이 있나요?","우리 공동체의 어떤 장면에 이 사람이 꼭 떠오르나요?","이 사람에게 '우리 팀에 있어 줘서 고마워'라고 말하고 싶은 이유는요?","함께 찬양하면서 이 사람을 새롭게 알게 된 순간은 언제인가요?","이 사람 덕분에 낯선 팀원이 편안해진 모습을 본 적이 있나요?","우리 팀의 추억 중 이 사람과 나누고 싶은 장면은요?","이 사람이 팀 안에서 만들어 주는 좋은 분위기는 무엇인가요?","이 사람이 계속 간직했으면 하는 공동체의 아름다운 점은요?","함께하는 동역자로서 이 사람에게 가장 전하고 싶은 말은요?","이 사람에게 다가올 한 해 어떤 응원을 보내고 싶나요?","이 사람이 지친 날 읽으면 좋을 따뜻한 한마디는요?","이 사람에게 '잘하고 있어'라고 말해 주고 싶은 이유는 무엇인가요?","앞으로 이 사람에게 더 자주 해 주고 싶은 말은 무엇인가요?","이 사람이 자신의 수고를 잊지 않도록 어떤 말을 해 주고 싶나요?","이 사람의 새로운 도전을 어떻게 응원하고 싶나요?","이 사람에게 전하고 싶은 짧은 축복의 문장은 무엇인가요?","내년에도 이 사람이 잃지 않았으면 하는 좋은 모습은 무엇인가요?","이 사람이 자신감을 얻을 수 있도록 어떤 장점을 알려 주고 싶나요?","이 사람의 하루가 조금 더 가벼워지도록 어떤 말을 전할까요?","이 사람이 앞으로도 계속 빛나기를 바라는 장점은 무엇인가요?","이 사람의 섬김을 하나님께서 기억하신다는 마음을 어떻게 전할까요?","이 사람에게 '너는 소중해'라고 말하고 싶은 이유는 무엇인가요?","혹시 힘든 시간을 보내고 있다면 어떤 격려를 전하고 싶나요?","이 사람이 스스로를 칭찬해도 좋을 순간은 언제였나요?","이 사람이 앞으로 경험하길 바라는 좋은 일은 무엇인가요?","이 사람에게 감사와 함께 덧붙일 응원의 문장은 무엇인가요?","이 사람의 작은 걸음을 격려하는 말을 적는다면요?","이 사람과 내년에도 나누고 싶은 따뜻한 인사는 무엇인가요?","지금 이 사람에게 가장 전하고 싶은 진심 한 문장은 무엇인가요?"];
+    // 100 distinct Scripture references + original meditation paraphrases (not Bible quotations).
+    const SCRIPTURE_MEDITATIONS = [{"ref":"창세기 12:2","meditation":"하나님이 주시는 복은 나를 넘어 다른 이에게도 흘러갑니다."},{"ref":"출애굽기 14:14","meditation":"두려울 때도 나보다 앞서 일하시는 하나님을 의지합니다."},{"ref":"출애굽기 15:2","meditation":"하나님은 우리의 힘이시며 기쁨으로 찬양할 이유가 되십니다."},{"ref":"민수기 6:24-26","meditation":"하나님의 돌보심과 평안이 사랑하는 이에게 머물기를 기도합니다."},{"ref":"신명기 6:5","meditation":"마음을 다해 하나님을 사랑하는 삶으로 나아갑니다."},{"ref":"신명기 31:6","meditation":"혼자가 아님을 기억하며 담대하게 오늘을 걸어갑니다."},{"ref":"여호수아 1:9","meditation":"어디로 가든 함께하시는 하나님을 기억하며 용기를 냅니다."},{"ref":"룻기 1:16","meditation":"함께 걷는 사랑과 신실함은 어려운 길에서 더욱 빛납니다."},{"ref":"사무엘상 16:7","meditation":"겉모습보다 중심을 보시는 하나님의 시선을 기억합니다."},{"ref":"역대상 16:34","meditation":"변함없는 하나님의 선하심에 감사하는 마음을 품습니다."},{"ref":"역대하 15:7","meditation":"선한 일을 포기하지 않고 힘을 내어 계속 걸어갑니다."},{"ref":"느헤미야 8:10","meditation":"하나님께로부터 오는 기쁨이 우리의 힘이 됩니다."},{"ref":"시편 16:8","meditation":"흔들리는 날에도 곁에 계신 하나님께 시선을 둡니다."},{"ref":"시편 18:2","meditation":"하나님은 지친 마음이 기댈 든든한 피난처이십니다."},{"ref":"시편 23:1","meditation":"하나님의 인도하심 안에서 필요한 것을 맡겨 드립니다."},{"ref":"시편 27:1","meditation":"하나님이 빛이 되시니 두려움보다 소망을 바라봅니다."},{"ref":"시편 28:7","meditation":"도움을 구하는 마음에 하나님께서 힘과 기쁨을 주십니다."},{"ref":"시편 34:8","meditation":"하나님의 선하심을 삶 속에서 직접 맛보기를 바랍니다."},{"ref":"시편 37:5","meditation":"내가 가는 길을 하나님께 맡기며 신뢰합니다."},{"ref":"시편 46:1","meditation":"환난 중에도 하나님은 가까이에서 도우시는 분입니다."},{"ref":"시편 51:10","meditation":"하나님께 새롭고 바른 마음을 구합니다."},{"ref":"시편 55:22","meditation":"무거운 짐을 혼자 지지 않고 하나님께 맡깁니다."},{"ref":"시편 90:12","meditation":"하루하루의 소중함을 알고 지혜롭게 살아가기를 바랍니다."},{"ref":"시편 100:4","meditation":"감사의 마음으로 하나님께 나아갑니다."},{"ref":"시편 103:2","meditation":"받은 은혜를 잊지 않고 하나씩 기억합니다."},{"ref":"시편 119:105","meditation":"하나님의 말씀을 오늘 걸음의 등불로 삼습니다."},{"ref":"시편 121:2","meditation":"도움은 하늘과 땅을 지으신 하나님께로부터 옵니다."},{"ref":"시편 126:5","meditation":"눈물로 심은 시간이 기쁨의 열매로 이어질 수 있습니다."},{"ref":"시편 133:1","meditation":"마음을 모아 함께 살아가는 모습은 아름답고 귀합니다."},{"ref":"시편 139:14","meditation":"한 사람 한 사람을 귀하게 지으신 손길을 기억합니다."},{"ref":"잠언 3:5-6","meditation":"내 생각만 의지하지 않고 하나님께 삶의 길을 여쭙습니다."},{"ref":"잠언 11:25","meditation":"다른 이를 넉넉히 돕는 마음은 또 다른 풍성함을 낳습니다."},{"ref":"잠언 16:3","meditation":"하는 일을 하나님께 맡기며 성실하게 나아갑니다."},{"ref":"잠언 17:17","meditation":"진실한 친구의 사랑은 어려울 때 더욱 드러납니다."},{"ref":"잠언 27:17","meditation":"서로를 북돋우며 함께 성장하는 동역자가 되기를 바랍니다."},{"ref":"전도서 3:1","meditation":"모든 일에는 때가 있음을 기억하며 오늘을 소중히 여깁니다."},{"ref":"전도서 4:9-10","meditation":"넘어질 때 서로 일으켜 주는 동행은 큰 선물입니다."},{"ref":"이사야 26:3","meditation":"하나님을 신뢰하는 마음에 깊은 평안을 구합니다."},{"ref":"이사야 40:31","meditation":"기다리는 시간에도 하나님이 새 힘을 주시리라 믿습니다."},{"ref":"이사야 41:10","meditation":"두려움 속에서도 붙들어 주시는 하나님을 기억합니다."},{"ref":"이사야 43:1","meditation":"하나님은 우리를 아시고 귀하게 부르시는 분입니다."},{"ref":"이사야 58:10","meditation":"도움이 필요한 이를 돌보는 사랑은 어둠을 밝힙니다."},{"ref":"예레미야 29:11","meditation":"하나님께서 주시는 미래의 소망을 붙잡습니다."},{"ref":"예레미야애가 3:22-23","meditation":"오늘도 새롭게 베푸시는 하나님의 자비에 감사합니다."},{"ref":"미가 6:8","meditation":"정의를 행하고 사랑을 실천하며 겸손히 하나님과 동행합니다."},{"ref":"하박국 3:17-18","meditation":"상황이 어렵더라도 하나님 안에서 기쁨을 발견합니다."},{"ref":"스바냐 3:17","meditation":"우리를 사랑하시며 기뻐하시는 하나님의 마음을 떠올립니다."},{"ref":"마태복음 5:9","meditation":"갈등 가운데 화평을 만드는 사람으로 살아가기를 바랍니다."},{"ref":"마태복음 5:14","meditation":"작은 자리에서도 세상을 밝히는 빛으로 살아갈 수 있습니다."},{"ref":"마태복음 5:16","meditation":"선한 행동으로 하나님께 영광을 돌리는 삶을 꿈꿉니다."},{"ref":"마태복음 6:33","meditation":"먼저 하나님의 뜻을 구하며 하루를 시작합니다."},{"ref":"마태복음 11:28","meditation":"지친 마음이 예수님 안에서 참된 쉼을 얻기를 바랍니다."},{"ref":"마태복음 18:20","meditation":"주님의 이름으로 모이는 작은 자리에도 주님은 함께하십니다."},{"ref":"마태복음 22:37-39","meditation":"하나님을 사랑하는 마음이 이웃 사랑으로 이어지기를 바랍니다."},{"ref":"마태복음 25:40","meditation":"작은 사람에게 베푸는 친절도 주님께 드리는 사랑입니다."},{"ref":"마태복음 28:20","meditation":"오늘도 우리와 함께하시는 예수님의 약속을 기억합니다."},{"ref":"마가복음 10:45","meditation":"더 높은 자리가 아니라 섬기는 마음을 배우게 하소서."},{"ref":"누가복음 6:31","meditation":"내가 받고 싶은 따뜻함을 먼저 다른 이에게 전해 봅니다."},{"ref":"누가복음 10:27","meditation":"하나님을 사랑하고 이웃을 아끼는 하루가 되기를 바랍니다."},{"ref":"누가복음 12:32","meditation":"염려 속에서도 하나님 아버지의 돌보심을 신뢰합니다."},{"ref":"요한복음 3:16","meditation":"하나님의 크신 사랑을 일상의 중심에 새깁니다."},{"ref":"요한복음 4:24","meditation":"하나님께 드리는 예배에 마음과 진실을 담습니다."},{"ref":"요한복음 13:34","meditation":"예수님이 우리를 사랑하신 것처럼 서로 사랑합니다."},{"ref":"요한복음 14:27","meditation":"세상이 주지 못하는 주님의 평안을 구합니다."},{"ref":"요한복음 15:5","meditation":"주님께 연결되어 있을 때 우리의 삶은 열매를 맺습니다."},{"ref":"요한복음 15:12","meditation":"먼저 받은 사랑을 서로에게 기꺼이 나눕니다."},{"ref":"요한복음 16:33","meditation":"어려움 가운데서도 주님의 승리를 기억하며 용기를 냅니다."},{"ref":"사도행전 20:35","meditation":"받는 기쁨과 함께 나누는 기쁨도 배웁니다."},{"ref":"로마서 8:28","meditation":"하나님을 사랑하는 이들의 삶에서 일하시는 선을 기대합니다."},{"ref":"로마서 12:10","meditation":"서로를 가족처럼 사랑하고 존중하기를 힘씁니다."},{"ref":"로마서 12:12","meditation":"소망 중에 기뻐하고 어려움 속에 인내하며 기도합니다."},{"ref":"로마서 12:15","meditation":"기쁠 때 함께 기뻐하고 슬플 때 함께 울어 줍니다."},{"ref":"로마서 15:5-6","meditation":"한마음으로 하나님께 영광 돌리는 공동체가 되기를 바랍니다."},{"ref":"고린도전서 12:26","meditation":"누군가의 아픔과 기쁨을 내 일처럼 함께 나눕니다."},{"ref":"고린도전서 13:4","meditation":"참된 사랑은 오래 참고 친절을 베푸는 모습에서 드러납니다."},{"ref":"고린도전서 15:58","meditation":"주님 안에서 드린 수고가 헛되지 않음을 기억합니다."},{"ref":"고린도후서 1:3-4","meditation":"받은 위로가 다른 이를 위로하는 손길이 됩니다."},{"ref":"고린도후서 4:16","meditation":"겉모습은 지쳐도 내면은 날마다 새로워질 수 있습니다."},{"ref":"고린도후서 9:7","meditation":"기쁜 마음으로 나누는 작은 정성은 소중합니다."},{"ref":"갈라디아서 5:13","meditation":"사랑으로 서로를 섬기는 자유를 살아 냅니다."},{"ref":"갈라디아서 6:2","meditation":"서로의 짐을 나누어 지는 공동체가 되기를 바랍니다."},{"ref":"에베소서 2:10","meditation":"우리는 선한 일을 위해 하나님이 빚으신 소중한 작품입니다."},{"ref":"에베소서 4:2","meditation":"겸손과 온유로 서로를 오래 참고 사랑으로 품습니다."},{"ref":"에베소서 4:29","meditation":"우리의 말이 듣는 사람에게 은혜와 힘이 되기를 바랍니다."},{"ref":"빌립보서 1:3","meditation":"사랑하는 사람을 떠올릴 때 감사로 기도합니다."},{"ref":"빌립보서 2:3","meditation":"겸손히 다른 사람을 나보다 귀하게 여깁니다."},{"ref":"빌립보서 4:6-7","meditation":"걱정 대신 감사와 기도로 마음을 하나님께 맡깁니다."},{"ref":"골로새서 3:12","meditation":"긍휼과 자비, 겸손과 온유를 입고 서로 대합니다."},{"ref":"골로새서 3:16","meditation":"말씀과 찬양을 함께 나누며 서로를 세워 줍니다."},{"ref":"데살로니가전서 5:11","meditation":"서로를 격려하고 믿음의 걸음을 북돋아 줍니다."},{"ref":"데살로니가전서 5:16-18","meditation":"기뻐하고 기도하며 감사하는 삶을 연습합니다."},{"ref":"디모데전서 4:12","meditation":"나이에 상관없이 삶의 모습으로 좋은 본이 될 수 있습니다."},{"ref":"디모데후서 1:7","meditation":"두려움보다 능력과 사랑과 절제의 마음을 선택합니다."},{"ref":"히브리서 10:24-25","meditation":"함께 모여 사랑과 선한 일을 격려하는 공동체가 됩니다."},{"ref":"히브리서 13:16","meditation":"선을 행하고 서로 나누는 일은 하나님을 기쁘시게 합니다."},{"ref":"야고보서 1:19","meditation":"말하기 전에 먼저 귀를 기울이는 마음을 배웁니다."},{"ref":"베드로전서 4:10","meditation":"각자 받은 은사를 서로를 섬기는 데 사용합니다."},{"ref":"베드로전서 5:7","meditation":"염려를 하나님께 맡길 수 있는 이유는 그분의 돌보심입니다."},{"ref":"요한일서 3:18","meditation":"사랑을 말뿐 아니라 작은 행동과 진실로 전합니다."},{"ref":"요한일서 4:7","meditation":"서로 사랑하며 사랑의 근원이신 하나님을 기억합니다."}];
+    // Unlike a fresh Math.random() draw on every visit, this selection depends only on
+    // the fixed event ID and personal code: stable across devices and page reloads.
+    function personalRandom(seedText){
+      let state=2166136261;
+      for(let i=0;i<seedText.length;i++){
+        state^=seedText.charCodeAt(i);
+        state=Math.imul(state,16777619)>>>0;
+      }
+      if(!state)state=0x9e3779b9;
+      return function(){
+        state ^= state<<13;state^=state>>>17;state^=state<<5;
+        return (state>>>0)/4294967296;
+      };
+    }
+    function selectPersonalPrompts(evt,member){
+      const rng=personalRandom('prompts|'+evt.id+'|'+member.code);
+      // One random choice from each of 5 themes ensures variety, with no duplicate question.
+      const chosen=[];
+      for(let group=0;group<5;group++)chosen.push(group*20+Math.floor(rng()*20));
+      for(let i=chosen.length-1;i>0;i--){
+        const j=Math.floor(rng()*(i+1));[chosen[i],chosen[j]]=[chosen[j],chosen[i]];
+      }
+      return chosen.map(i=>REFLECTION_QUESTIONS[i]);
+    }
+    function selectPersonalScripture(evt,member){
+      const rng=personalRandom('scripture|'+evt.id+'|'+member.code);
+      return SCRIPTURE_MEDITATIONS[Math.floor(rng()*SCRIPTURE_MEDITATIONS.length)];
+    }
+    function renderPersonalReflections(){
+      const prompts=selectPersonalPrompts(publicEvt,publicMember);
+      const list=$('reflection-questions');
+      list.replaceChildren();
+      prompts.forEach((prompt,i)=>{
+        const li=document.createElement('li');
+        const badge=document.createElement('span');badge.className='prompt-num';badge.textContent=String(i+1);
+        const body=document.createElement('span');body.textContent=prompt;
+        li.append(badge,body);list.appendChild(li);
+      });
+      const verse=selectPersonalScripture(publicEvt,publicMember);
+      $('scripture-meditation').textContent=verse.meditation;
+      $('scripture-reference').textContent=verse.ref;
+    }
+    function letterKey() {return publicEvt && publicMember ? 'coramdeo-post-draft-'+publicEvt.id+'-'+publicMember.code : null;}
+    function letterBody() {return $('mobile-letter-text').value.trim();}
+    function composedLetter() {
+      return '💌 코람데오 우체통\n\nTO. '+publicMember.recipient+'\n\n'+letterBody()+'\n\nFROM. '+publicMember.name+'\n\nCORAM DEO POST OFFICE';
+    }
+    function letterStatus(message,error=false) {
+      $('mobile-letter-status').textContent=message;
+      $('mobile-letter-status').style.color=error?'#a33e36':'#477454';
+    }
+    function restoreLetterDraft() {
+      $('mobile-recipient-name').textContent=publicMember.recipient;
+      $('mobile-writer-name').textContent=publicMember.name;
+      $('mobile-letter-text').value=isPreview?'':(safeGet(letterKey())||'');
+      $('letter-count').textContent=$('mobile-letter-text').value.length+' / 3000자';
+      letterStatus('');
+      show('mobile-letter-panel',false);
+      $('open-mobile-letter').setAttribute('aria-expanded','false');
+      $('open-mobile-letter').textContent='✍ 모바일로 편지 작성하기';
+    }
+    let publicEvt=null,publicMember=null,isPreview=false;
+    function publicInit(evt) {
+      if(!validateEvent(evt)) {show('public-view');$('public-login').classList.remove('hide');$('login-error').textContent='참가자용 행사 데이터가 올바르지 않습니다. 운영진에게 연락해 주세요.';show('login-error');$('login-form').classList.add('hide');return;}
+      show('public-view');renderParticipant(evt,null,false);
+    }
+    function renderParticipant(evt,initialCode,preview){
+      publicEvt=evt;publicMember=null;isPreview=preview;
+      $('login-form').classList.remove('hide');show('login-error',false);$('login-form').reset();
+      show('public-login',false);show('public-ready',false);show('public-revealed',false);show('switch-code',false);
+      show('mobile-letter-panel',false);
+      if(preview) {
+        $('switch-code').textContent='← 주최자 화면으로 돌아가기';show('switch-code');
+        startUser(initialCode,false);
+        return;
+      }
+      $('switch-code').textContent='다른 개인 코드로 확인하기';
+      const params=new URLSearchParams(location.hash.startsWith('#')?location.hash.slice(1):'');
+      const hashCode=(params.get('code')||'').trim().toUpperCase();
+      const prev=readPublic(evt);
+      const code=hashCode || (prev&&prev.code) || '';
+      if(code && evt.members.some(m=>m.code===code)) startUser(code,prev?.code===code&&prev?.revealed===true);
+      else {
+        show('public-login');
+        if(hashCode){$('personal-code').value=hashCode;show('login-error');$('login-error').textContent='일치하는 개인 코드가 없습니다. 다시 확인해 주세요.';}
+      }
+    }
+    function startUser(code,revealed){
+      publicMember=publicEvt.members.find(m=>m.code===code);
+      if(!publicMember) return false;
+      show('public-login',false);show('switch-code',true);
+      if(!isPreview) storePublic(publicEvt,code,!!revealed);
+      if(revealed) showRecipient();
+      else {
+        $('visitor-name').textContent=publicMember.name;
+        show('public-ready');show('public-revealed',false);
+      }
+      return true;
+    }
+    function showRecipient(){
+      if(!publicMember)return;
+      $('writer-name').textContent=publicMember.name;
+      $('recipient-name').textContent=publicMember.recipient;
+      renderPersonalReflections();
+      restoreLetterDraft();
+      show('public-ready',false);show('public-revealed');
+      if(!isPreview)storePublic(publicEvt,publicMember.code,true);
+    }
+    $('open-mobile-letter').addEventListener('click',()=>{
+      if(!publicMember)return;
+      const opening=$('mobile-letter-panel').classList.contains('hide');
+      show('mobile-letter-panel',opening);
+      $('open-mobile-letter').setAttribute('aria-expanded',String(opening));
+      $('open-mobile-letter').textContent=opening?'접어 두기 ↑':'✍ 모바일로 편지 작성하기';
+      if(opening) $('mobile-letter-text').focus({preventScroll:true});
+    });
+    $('mobile-letter-text').addEventListener('input',()=>{
+      $('letter-count').textContent=$('mobile-letter-text').value.length+' / 3000자';
+      if(!isPreview && letterKey())safeSet(letterKey(),$('mobile-letter-text').value);
+      letterStatus('초안이 현재 기기에 저장되었어요. 공유하거나 복사하면 편지를 전달할 수 있어요.');
+    });
+    $('share-mobile-letter').addEventListener('click',async()=>{
+      if(!publicMember || !letterBody()){letterStatus('먼저 편지 내용을 작성해 주세요.',true);$('mobile-letter-text').focus();return;}
+      const text=composedLetter();
+      if(navigator.share){
+        try{
+          await navigator.share({title:'코람데오 우체통 · TO. '+publicMember.recipient,text});
+          letterStatus('공유 화면에서 전달했는지 확인해 주세요. 실제 수신 여부는 선택한 앱에서 확인할 수 있어요.');
+          return;
+        }catch(e){if(e && e.name==='AbortError'){letterStatus('공유가 취소되었어요. 편지는 그대로 보관되어 있어요.');return;}}
+      }
+      const ok=await copyText(text);
+      letterStatus(ok?'공유 기능을 사용할 수 없어 편지를 복사했어요. 카카오톡이나 문자에 붙여 넣고 직접 보내 주세요.':'공유 기능을 지원하지 않습니다. 편지 내용을 직접 선택해 복사해 주세요.',!ok);
+    });
+    $('copy-mobile-letter').addEventListener('click',async()=>{
+      if(!publicMember || !letterBody()){letterStatus('먼저 편지 내용을 작성해 주세요.',true);$('mobile-letter-text').focus();return;}
+      const ok=await copyText(composedLetter());
+      letterStatus(ok?'편지를 복사했어요. 수신인 또는 운영진에게 메시지로 직접 보내 주세요.':'복사하지 못했어요. 직접 편지 내용을 선택해 복사해 주세요.',!ok);
+    });
+    $('login-form').addEventListener('submit',(e)=>{
+      e.preventDefault();const code=$('personal-code').value.toUpperCase().replace(/\s+/g,'');
+      if(!startUser(code,false)){$('login-error').textContent='개인 코드를 다시 확인해 주세요. 운영진이 전달한 코드만 사용할 수 있어요.';show('login-error');}
+    });
+    $('reveal-btn').addEventListener('click',()=>{
+      const envelope=document.querySelector('.envelope');envelope.classList.add('open');
+      setTimeout(()=>{showRecipient();envelope.classList.remove('open');},380);
+    });
+    $('switch-code').addEventListener('click',()=>{
+      if(isPreview){show('public-view',false);show('builder');show('builder-result');window.scrollTo({top:0,behavior:'smooth'});return;}
+      safeRemove('coramdeo-post-user-'+publicEvt.id);
+      if(location.hash.startsWith('#code=')) history.replaceState(null,'',location.pathname+location.search);
+      renderParticipant(publicEvt,null,false);
+    });
+    if(BUNDLED_EVENT) publicInit(BUNDLED_EVENT); else adminInit();
+  </script></body></html>
